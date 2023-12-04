@@ -1,0 +1,1119 @@
+// Custom.scss
+// Option B: Include parts of Bootstrap
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "bootstrap/functions";
+
+// 2. Include any default variable overrides here
+
+// 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
+@import "bootstrap/variables";
+@import "bootstrap/variables-dark";
+
+// 4. Include any default map overrides here
+
+// 5. Include remainder of required parts
+@import "bootstrap/maps";
+@import "bootstrap/mixins";
+@import "bootstrap/root";
+
+// 6. Optionally include any other parts as needed
+@import "bootstrap/utilities";
+@import "bootstrap/reboot";
+@import "bootstrap/type";
+@import "bootstrap/images";
+@import "bootstrap/containers";
+@import "bootstrap/grid";
+@import "bootstrap/helpers";
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "bootstrap/utilities/api";
+
+// 8. Add additional custom code here
+@import "bootstrap/buttons";
+@import "bootstrap/navbar";
+@import "bootstrap/nav";
+@import "bootstrap/offcanvas";
+@import "bootstrap/close";
+@import "bootstrap/carousel";
+@import "bootstrap/progress";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Noto+Sans+TC:wght@300;400&display=swap');
+
+// 中文/英文 使用不同字體
+html * {
+    font-family: MyCustomFont !important;
+}
+
+/* 英文用 Inter */
+@font-face {
+    font-family: MyCustomFont;
+    src: local("Inter Light"), local(Segoe UI), local(Helvetica);
+    unicode-range: U+00-024F;
+}
+
+/* 中文用思原黑 */
+@font-face {
+    font-family: MyCustomFont;
+    src: local("Noto Sans TC"), local("微軟正黑體"), local("Microsoft JhengHei");
+    unicode-range: U+4E00-9FFF;
+}
+
+
+// 文字排版
+.letter-spacing-1 {
+    letter-spacing: 0.5rem;
+}
+
+.letter-spacing-2 {
+    letter-spacing: 0.1rem;
+}
+
+
+.writing-mode {
+    writing-mode: vertical-rl;
+}
+
+// 頁面
+.main {
+    overflow: hidden;
+}
+
+// 背景
+.bg-box {
+    position: absolute;
+    z-index: -100;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    .main-bg-1 {
+        height: 1920px;
+
+        &::before {
+            content: '';
+            width: 200%;
+            padding-top: 80%;
+            border-radius: 100%;
+            background-image: linear-gradient(rgba(255, 245, 190, 1), rgba(255, 245, 190, 0));
+            position: absolute;
+            top: -20%;
+            right: 45%;
+            z-index: -1;
+        }
+
+        &::after {
+            content: '';
+            width: 200%;
+            padding-top: 80%;
+            border-radius: 100%;
+            background-image: linear-gradient(rgba(255, 245, 190, 1), rgba(255, 245, 190, 0));
+            position: absolute;
+            top: -20%;
+            left: 45%;
+            z-index: -1;
+        }
+    }
+
+    .main-bg-2 {
+        width: 170%;
+        padding-top: 120%;
+        background-color: $light;
+        border-radius: 100%;
+        position: absolute;
+        left: 50%;
+        top: 30%;
+        z-index: -1;
+        transform: translate(-50%, 0);
+    }
+}
+
+@media (max-width:1600px) {
+    .bg-box {
+        .main-bg-1 {
+            &::before {
+                top: -13%;
+            }
+
+            &::after {
+                top: -13%;
+            }
+        }
+
+    }
+}
+
+
+@media (max-width:1400px) {
+    .bg-box {
+        .main-bg-1 {
+            &::before {
+                top: -12%;
+            }
+
+            &::after {
+                top: -12%;
+            }
+        }
+
+    }
+}
+
+@media (max-width:1200px) {
+    .bg-box {
+        .main-bg-1 {
+            &::before {
+                top: -10%;
+            }
+
+            &::after {
+                top: -10%;
+            }
+        }
+
+    }
+}
+
+
+@media (max-width:992px) {
+    .bg-box {
+        .main-bg-1 {
+            &::before {
+                padding-top: 100%;
+                right: 40%;
+                top: -4%;
+            }
+
+            &::after {
+                padding-top: 100%;
+                left: 40%;
+                top: -4%;
+            }
+        }
+
+    }
+}
+
+@media (max-width:768px) {
+    .bg-box {
+        .main-bg-1 {
+            &::before {
+                right: 38%;
+                top: -2%;
+            }
+
+            &::after {
+                left: 38%;
+                top: -2%;
+            }
+        }
+
+    }
+}
+
+@media (max-width:576px) {
+    .bg-box {
+        .main-bg-1 {
+            &::before {
+                padding-top: 120%;
+                right: 35%;
+                top: -1%;
+            }
+
+            &::after {
+                padding-top: 120%;
+                left: 35%;
+                top: -1%;
+            }
+        }
+
+        .main-bg-2 {
+            top: 28%;
+        }
+
+    }
+}
+
+@media (max-width:431px) {
+    .bg-box {
+        .main-bg-1 {
+            &::before {
+                padding-top: 140%;
+            }
+
+            &::after {
+                padding-top: 140%;
+            }
+        }
+
+        .main-bg-2 {
+            top: 23%;
+        }
+
+    }
+}
+
+
+
+
+// menu，視窗捲到指定位置才會顯示按鈕控制offcanvas
+.menu {
+    position: fixed;
+    width: fit-content;
+    top: 0;
+    right: 2%;
+    z-index: 100;
+    display: none;
+}
+
+.open-menu {
+    display: block;
+}
+
+.menu-logo {
+    width: 40px;
+    margin-top: 50%;
+}
+
+// offcanvas 選單
+.img-offcanvas-logo {
+    width: 80px;
+}
+
+.img-offcanvas-fruit {
+    width: 40px;
+}
+
+.offcanvas {
+    width: fit-content;
+    height: fit-content;
+    padding-left: 50%;
+    padding-bottom: 10%;
+    background: url(../images/offcanvas-bg.png) no-repeat;
+    background-size: cover;
+    background-position: 0 100%;
+}
+
+// .circle-bg {
+//     width: 1920px;
+//     height: 1920px;
+//     position: absolute;
+//     left: 0;
+//     bottom: 0;
+//     z-index: -100;
+//     background: $white;
+//     border-radius: 50%;
+// }
+
+@media (max-width:1400px) {
+    .offcanvas {
+        padding-left: 70%;
+    }
+}
+
+@media (max-width:992px) {
+    .offcanvas {
+        padding-left: 90%;
+    }
+}
+
+@media (max-width:576px) {
+    .offcanvas {
+        padding-left: 100%;
+    }
+}
+
+@media (max-width:431px) {
+    .offcanvas {
+        padding-left: 120%;
+    }
+}
+
+.offcanvas-body {
+    padding-left: 100px !important;
+    padding-right: 100px !important;
+}
+
+@media (max-width:1199px) and (min-width:993px) {
+    .offcanvas-body {
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
+}
+
+@media (max-width:992px) {
+    .offcanvas-body {
+        padding-left: 50px !important;
+        padding-right: 50px !important;
+    }
+}
+
+@media (max-width:768px) {
+    .offcanvas-body {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+}
+
+@media (max-width:576px) {
+    .offcanvas-body {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+
+
+// KV
+
+.kv {
+    position: relative;
+    margin-bottom: 5%;
+    padding: 0;
+
+    .kv-content {
+        margin-top: 10%;
+    }
+
+    .kv-logo {
+        width: 80px;
+    }
+
+    // 左右側欄 side-menu、follow us
+    .side-menu,
+    .side-follow {
+
+        a {
+            text-decoration: none;
+            padding: 0.8rem;
+        }
+    }
+}
+
+
+@media (max-width:992px) {
+    .kv {
+        margin-bottom: 3%;
+
+        .kv-content {
+            margin-top: 18%;
+        }
+
+    }
+}
+
+
+@media (max-width:576px) {
+    .kv {
+        .kv-content {
+            margin-top: 20%;
+        }
+
+        .side-follow li:first-child {
+            padding-top: 0.8rem;
+        }
+
+    }
+}
+
+
+@media (max-width:431px) {
+    .kv {
+        .kv-content {
+            margin-top: 25%;
+        }
+
+        .kv-content p {
+            line-height: 1;
+        }
+
+        .kv-logo {
+            width: 70px;
+        }
+
+        .kv-fruit {
+            width: 80%;
+        }
+    }
+}
+
+// 主要內容
+.main-container-bg {
+    background-color: $light;
+}
+
+.main-container {
+    max-width: 1400px;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+// 柿子園介紹
+.content-group {
+    height: 500px;
+    margin-bottom: 10%;
+
+    .content-group-img {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+
+    .content-text {
+        width: 60%;
+        padding: 0 6%;
+        opacity: 0;
+    }
+
+}
+
+@media (max-width:768px) {
+    .content-group {
+        height: 400px;
+    }
+}
+
+@media (max-width:767px) and (min-width:577px) {
+    .content-group {
+        width: 80%;
+        height: fit-content;
+        margin: 0 auto 10%;
+
+        .content-group-img {
+            height: 250px;
+            margin-bottom: 5%;
+        }
+
+        .content-text {
+            width: 100%;
+            padding: 0;
+        }
+
+    }
+}
+
+@media (max-width:576px) {
+    .content-group {
+        width: 80%;
+        height: auto;
+        margin: 0 auto 10%;
+
+        .content-group-img {
+            height: 250px;
+            margin-bottom: 5%;
+        }
+
+        .content-text {
+            width: 100%;
+            padding: 0;
+        }
+    }
+}
+
+@media (max-width:431px) {
+    .content-group {
+        .content-group-img {
+            height: 200px;
+        }
+    }
+}
+
+.pic-about {
+    background: url(../images/about.jpg) no-repeat;
+    background-size: cover;
+    border-radius: 50px;
+}
+
+@media (max-width:1400px) {
+    .pic-about {
+        border-radius: 0 50px 50px 0;
+    }
+}
+
+@media (max-width:767px) {
+    .pic-about {
+        border-radius: 0 50px 0 50px;
+    }
+}
+
+// 最新消息
+.news {
+    margin-bottom: 10%;
+
+    .news-title {
+        white-space: nowrap;
+        padding-right: 6%;
+    }
+
+    .pic-news {
+        border-radius: 50px;
+    }
+
+    .card-group {
+        margin-left: auto;
+        flex-wrap: nowrap;
+    }
+
+    .card a {
+        width: fit-content;
+
+        &:hover {
+            color: $white;
+        }
+
+        span {
+            font-size: 12px;
+        }
+    }
+
+    // 隱藏滾動條
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+}
+
+
+@media (max-width:1400px) {
+    .news {
+
+        .news-title {
+            padding: 0 6%;
+        }
+    }
+}
+
+@media (max-width:992px) and (min-width:769px) {
+    .news {
+        .card-group {
+            padding: 0 6%;
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .news {
+        .card-group {
+            padding: 0 6%;
+        }
+    }
+}
+
+@media (max-width:576px) {
+    .news {
+        .card-box {
+            overflow-x: auto;
+        }
+
+        .card-group {
+            width: 1000px;
+        }
+    }
+}
+
+@media (max-width:431px) {
+    .news {
+        .card-box {
+            overflow-x: auto;
+        }
+
+        .card-group {
+            width: 800px;
+        }
+    }
+}
+
+
+// 樹
+.tree {
+    left: -50px;
+    padding-bottom: 3%;
+
+    .pic-tree {
+        width: 1104px;
+        height: 268px;
+        background: url(../images/樹.png) no-repeat;
+        background-size: cover;
+        background-position-x: right;
+    }
+}
+
+@media (max-width:1199px) and (min-width:993px) {
+    .tree {
+        .pic-tree {
+            width: 950px;
+            height: 240px;
+        }
+    }
+}
+
+@media (max-width:992px) {
+    .tree {
+        .pic-tree {
+            width: 950px;
+            height: 240px;
+        }
+    }
+}
+
+@media (max-width:991px) and (min-width:767px) {
+    .tree {
+        .pic-tree {
+            width: 800px;
+            height: 200px;
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .tree {
+        .pic-tree {
+            width: 760px;
+            height: 200px;
+        }
+    }
+}
+
+@media (max-width:767px) and (min-width:577px) {
+    .tree {
+        left: 0;
+
+        .pic-tree {
+            width: 600px;
+            height: 150px;
+        }
+    }
+}
+
+@media (max-width:576px) {
+    .tree {
+        left: 0;
+
+        .pic-tree {
+            width: 560px;
+            height: 150px;
+        }
+    }
+}
+
+@media (max-width:575px) and (min-width:432px) {
+    .tree {
+        left: -40px;
+
+        .pic-tree {
+            width: 480px;
+            height: 120px;
+        }
+    }
+}
+
+@media (max-width:431px) {
+    .tree {
+        left: -30px;
+
+        .pic-tree {
+            width: 410px;
+            height: 110px;
+
+        }
+    }
+}
+
+
+// 柿子品種
+.varieties {
+    border-radius: 50px;
+    padding: 70px;
+    opacity: 0%;
+
+    .content-title {
+        width: 80%;
+    }
+
+    .varieties-fruit {
+        transform: rotate(15deg);
+    }
+
+    .card {
+        width: 70%;
+        margin-bottom: 10%;
+    }
+
+    .pic-tag {
+        left: -30px;
+    }
+
+    .card-img-box {
+        width: 45%;
+    }
+
+    .card-body {
+        width: 55%;
+
+        .list-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            margin: 0;
+        }
+
+        .list-title {
+            background-color: $light;
+            text-align: center;
+            padding: 0 1%;
+            font-size: 20px;
+            font-weight: 400;
+            white-space: nowrap;
+        }
+
+        .list-content {
+            width: 100%;
+            padding: 0;
+            margin-left: 24px;
+
+            .text {
+                margin-left: 3%;
+            }
+        }
+
+    }
+}
+
+@media (max-width:1400px) {
+    .varieties {
+        margin: 0 6%;
+    }
+}
+
+@media (max-width:1200px) and (min-width:993px) {
+    .varieties {
+        padding: 60px 20px;
+    }
+}
+
+@media (max-width:992px) {
+    .varieties {
+        padding: 60px 20px;
+
+        .card {
+            width: 80%;
+        }
+
+        .pic-tag {
+            left: -10px;
+        }
+
+    }
+}
+
+@media (max-width:768px) {
+    .varieties {
+
+        .card {
+            width: 100%;
+        }
+
+        .card-img-box {
+            width: 35%;
+        }
+
+        .pic-tag {
+            width: 25%;
+        }
+
+        .card-body {
+            .list-item {
+                align-items: start;
+
+                .list-title {
+                    width: 70px;
+                    font-size: 16px;
+                }
+
+            }
+        }
+    }
+}
+
+@media (max-width:767px) and (min-width:577px) {
+    .varieties {
+        .card-img-box {
+            width: 40%;
+            margin-bottom: -20px;
+        }
+
+        .card-body {
+            width: 70%;
+        }
+    }
+}
+
+@media (max-width:576px) {
+    .varieties {
+        .content-title {
+            width: 90%;
+        }
+
+        .pic-tag {
+            width: 20%;
+        }
+
+        .card-img-box {
+            width: 65%;
+            margin-bottom: -20px;
+        }
+
+        .card {
+            width: 80%;
+        }
+
+        .card-body {
+            width: 100%;
+
+            .list-item {
+                padding: 8px 0;
+            }
+
+            .list-content {
+                margin-left: 15px;
+            }
+
+        }
+    }
+}
+
+@media (max-width:431px) {
+    .varieties {
+        padding: 40px 10px;
+
+        .content-title {
+            width: 95%;
+        }
+
+        .card {
+            width: 90%;
+        }
+
+        .card-body {
+            .list-content {
+                .progress {
+                    width: 60% !important;
+                }
+            }
+        }
+
+    }
+}
+
+// 園主介紹
+.farmer {
+    margin-top: 10%;
+}
+
+.pic-farmer {
+    background: url(../images/farmer.jpg) no-repeat;
+    background-size: cover;
+    border-radius: 50px;
+
+}
+
+@media (max-width:1400px) {
+    .pic-farmer {
+        border-radius: 0 50px 50px 0;
+    }
+}
+
+@media (max-width:767px) {
+    .pic-farmer {
+        border-radius: 0 50px 0 50px;
+    }
+}
+
+
+
+// 直銷商店
+.store {
+    .list-content {
+        span {
+            display: inline-block;
+            margin: 0 3%;
+            line-height: 1.35;
+        }
+    }
+
+    .title {
+        font-weight: 400;
+        white-space: nowrap;
+    }
+}
+
+.pic-store {
+    background: url(../images/store.jpg) no-repeat;
+    background-size: cover;
+    border-radius: 50px;
+}
+
+@media (max-width:1400px) {
+    .pic-store {
+        border-radius: 50px 0 0 50px;
+    }
+}
+
+@media (max-width:767px) {
+    .pic-store {
+        border-radius: 0 50px 0 50px;
+    }
+}
+
+
+
+// 預約採果體驗
+.reservation {
+    padding-bottom: 8%;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        width: 200%;
+        padding-top: 80%;
+        border-radius: 100%;
+        background-color: $light;
+        position: absolute;
+        z-index: -1;
+        left: 50%;
+        bottom: 10%;
+        transform: translate(-50%, 0);
+    }
+
+    .content-body {
+        span {
+            display: inline-block;
+            margin: 0 3%;
+            line-height: 1.35;
+        }
+
+        .phone-num {
+            font-size: 32px;
+            text-decoration-thickness: 1px;
+            line-height: 0.75;
+        }
+
+        .reservation-icon {
+            font-size: 32px;
+        }
+    }
+
+    .border-rule {
+        width: 0.5px;
+        height: 100%;
+        background-color: #958781;
+    }
+}
+
+@media (max-width:1400px) {
+    .reservation {
+        padding-bottom: 10%;
+    }
+}
+
+@media (max-width:992px) {
+    .reservation {
+        &::after {
+            bottom: 4%;
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .reservation {
+        padding-bottom: 15%;
+
+        &::after {
+            bottom: 6%;
+        }
+    }
+}
+
+
+@media (max-width:576px) {
+    .reservation {
+        padding-bottom: 20%;
+
+        .content-title {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .border-rule {
+            width: 90%;
+            height: 0.5px;
+            margin: 5% 0;
+        }
+
+        &::after {
+            padding-top: 140%;
+            bottom: 4%;
+        }
+
+        a {
+            width: 80%;
+        }
+    }
+}
+
+@media (max-width:431px) {
+    .reservation {
+        .content-body {
+            padding: 0 5%;
+        }
+
+        &::after {
+            width: 250%;
+            padding-top: 250%;
+            bottom: 4%;
+        }
+
+    }
+}
+
+// copyright
+.copyright {
+    font-size: 10px;
+}
+
+
+// 動畫
+
+.kv-logo.animate__animated.animate__fadeIn {
+    animation-delay: 1s;
+}
+
+.kv-fruit.animate__animated.animate__fadeIn {
+    animation-delay: 1.5s;
+}
+
+.kv-text.animate__animated.animate__fadeIn {
+    animation-delay: 2s;
+}
+
+.content-group .content-text.fadeIn-slow {
+    animation-duration: 2s;
+    animation-delay: 1.5s;
+    opacity: 100%;
+}
+
+.varieties.animation-fadeIn {
+    opacity: 100%;
+    transition: 2s;
+}
+
+.animation-pulse {
+    transform: scaleX(1) rotate(15deg);
+    transition: 1s;
+}
+
+.animation-pulse:hover {
+    transform: scale3d(1.05, 1.05, 1.05) rotate(15deg);
+}
