@@ -67,3 +67,16 @@ window.addEventListener("scroll", function () { // 監聽 window，當 scroll �
 });
 
 
+// Offcanvas 點錨點連結，關閉 Offcanvas
+document.addEventListener("DOMContentLoaded", function () {
+    /* hide offCanvasMenu when clicking a link */
+    var myOffcanvas = document.getElementById("offcanvasNavbar");
+    var bsOffcanvas = new bootstrap.Offcanvas(myOffcanvas);  // 建構子函數 New，透過 function 的方式來建立一個新的物件(同屬性名稱但不同屬性值的物件內容)，在 bootstrap.Offcanvas 內建立 myOffcanvas 的屬性值
+    var menuLinks = document.querySelectorAll(".offcanvas-body .nav-link");  // 取得錨點
+    for (var i = 0; i < menuLinks.length; i++) {  // 設定變數 i 初始值=0；限制值為 menuLinks.length 數目； i++ 是每次直行完迴圈都 +1 ，因此迴圈從 0 開始顯示，一直顯示到 2 為止，
+        menuLinks[i].addEventListener("click", function (event) {  // 監聽 menuLinks 的每個陣列，當點滑鼠擊時
+            bsOffcanvas.hide();  // bsOffcanvas 物件執行隱藏
+        });
+    }
+});
+
