@@ -1,0 +1,747 @@
+body {
+  margin: auto;
+  /* background-color: bisque; */
+  font-family: 'Noto Sans TC';
+}
+
+a {
+  text-decoration: none;
+}
+
+.bar-mobile {
+  display: none;
+}
+
+
+
+
+
+/* -----------------pc 選單-------------- */
+.wrap-pc {
+  max-width: 1200px;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.header-pc {
+  height: 60px;
+  position: relative;
+  top: 7px;
+}
+
+.logo-pc {
+  float: left;
+  max-width: 160px;
+
+}
+
+.logo-pc img {
+  width: 100%;
+  height: 100%;
+}
+
+.menu-pc {
+
+  float: right;
+  position: relative;
+}
+
+.menu-pc li {
+  float: left;
+}
+
+.menu-pc a {
+  display: block;
+  color: #000;
+  padding: 1em 2em;
+  text-decoration: none;
+}
+
+.menu-pc a:hover {
+  background-color: #004785;
+  color: #fff;
+}
+
+.menu-pc span {
+  font-size: 16px;
+  vertical-align: top;
+}
+
+
+
+.menu_open-pc {
+  width: 227px;
+  position: absolute;
+  z-index: 100;
+  background-color: #fff;
+}
+
+.menu_open-pc li {
+  width: 227px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.menu-pc>li:after {
+  content: "|";
+  /* 選單分隔線 */
+  position: absolute;
+  top: 15px;
+  color: #000;
+}
+
+.menu-pc>li:first-child:after {
+  content: "";
+  /* 選單分隔線第一個移除 */
+}
+
+
+/*在PC上隱藏漢堡選單*/
+.showmenu {
+  display: none;
+}
+
+.wrap-pc ul ul {
+  display: none;
+}
+
+.wrap-pc ul li:hover>ul {
+  display: block;
+}
+
+
+
+
+.kv {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.kvimg {
+  width: 100%;
+  height: 0;
+  padding-bottom: 40%;
+  overflow: hidden;
+  background-image: url(../images/kv.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+/* .kv {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.kv img {
+  width: 100%;
+} */
+
+
+
+
+
+
+article {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100px;
+  color: #004785;
+  font-size: 24px;
+  padding-top: 3%;
+}
+
+.title span {
+  font-size: 30px;
+}
+
+/* 會員福利 */
+.article_container {
+  max-width: 1200px;
+  height: 690px;
+  color: #004785;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 3%;
+}
+
+.article_container p {
+  color: #004785;
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+.container_product-lift {
+  width: 30%;
+  background-color: #dbeff9;
+  background-image: url(../images/VIP獨享禮遇-bg.png);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding: 0 5%;
+}
+
+.container_product-lift:hover {
+  padding-bottom: 8%;
+  transition: all 1s;
+}
+
+.vip-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #004785;
+}
+
+
+.container_product-right {
+  width: 59%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.product_content2 {
+  height: 49%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.content4 {
+  width: 39%;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0 5%;
+}
+
+.content4:hover {
+  /* 透明度 0.6 的黑色半透明遮罩 */
+  background-color: rgba(255, 255, 255, .7);
+  /* 設置背景混和模式為相乘模式 */
+  background-blend-mode: color;
+  padding-bottom: 8%;
+  transition: all 1s;
+}
+
+.lift-top {
+  background-image: url(../images/生日禮.png);
+}
+
+.right-top {
+  background-image: url(../images/購書折扣.png);
+}
+
+.lift-bottom {
+  background-image: url(../images/月月會員日.png);
+}
+
+.right-bottom {
+  background-image: url(../images/消費累點及使用規則.png);
+}
+
+.content4_text {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #004785;
+}
+
+.content4_text p {
+  display: none;
+  opacity: 0%;
+}
+
+.content4:hover p {
+  display: block;
+  opacity: 100%;
+}
+
+
+
+
+/* 會員權益一覽表 */
+.article_table {
+  max-width: 1200px;
+  text-align: center;
+  border: 1px solid #e5e5e5;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.col {
+  width: 400px;
+  padding: 2.5% 2%;
+}
+
+.col:nth-child(2) {
+  border-left: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+
+}
+
+.row_title {
+  background-color: #e5e5e5;
+  padding: 0.5%;
+  font-size: 20px;
+}
+
+.row_text {
+  padding: 2.5% 2%;
+
+}
+
+.row_note {
+  padding: 1% 2% 2%;
+  border-top: 1px solid #e5e5e5;
+}
+
+.col_vip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.col_vip br {
+  display: none;
+}
+
+.col_vip img {
+  width: 35px;
+  margin-bottom: 1%;
+}
+
+.bold {
+  color: #ff6427;
+  font-weight: bold;
+}
+
+.big {
+  font-size: 24px;
+}
+
+.up-text br {
+  display: none;
+}
+
+.card {
+  max-width: 250px;
+  width: 100%;
+}
+
+.article_conttent {
+  max-width: 1200px;
+  margin: 8% auto;
+}
+
+.open_icon {
+  width: 4%;
+}
+
+.open_text {
+  max-width: 960px;
+  font-size: 20px;
+  color: #004785;
+  text-align: center;
+  margin: 2% auto 5%;
+  line-height: 1.5;
+}
+
+.illustrate {
+  max-width: 1200px;
+  background: #f9f9f9;
+  margin-bottom: 1%;
+}
+
+.illustrate-project {
+  max-width: 960px;
+  background: #f9f9f9;
+  margin: auto;
+  padding: 2% 0;
+}
+
+.project-title {
+  max-width: 960px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #004785;
+  padding: 1%;
+}
+
+.project-title span {
+  vertical-align: top;
+  font-size: 20px;
+}
+
+.project-text {
+  display: none;
+  max-width: 960px;
+  line-height: 1.5;
+  margin-left: 1.5em;
+  text-align: left;
+  padding: 2%;
+}
+
+.project-text a {
+  color: #000;
+  border-bottom: 1px solid #000;
+}
+
+.project-text ul {
+  list-style-type: disc;
+}
+
+.project-text li {
+  margin-bottom: 2%;
+}
+
+
+
+h3 {
+  font-size: 24px;
+  color: #004785;
+  margin-bottom: 6%;
+}
+
+.product1 span {
+  font-size: 36px;
+  margin-bottom: 6%;
+
+}
+
+
+@media screen and (max-width: 769px) {
+  .bar-pc {
+    display: none;
+  }
+
+  .bar-mobile {
+    display: block;
+  }
+
+  .wrap {
+    max-width: 768px;
+    padding: 0;
+    margin: 0 auto;
+    position: relative;
+    z-index: 100;
+  }
+
+  .wrap ul ul {
+    display: block;
+  }
+
+  .header {
+    max-width: 768px;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+  }
+
+  .logo {
+    float: left;
+    max-width: 180px;
+    padding: 1% 2%;
+  }
+
+  .logo img {
+    width: 90%;
+  }
+
+  .menu {
+
+    /*隱藏選單開始*/
+    max-height: 0px;
+    overflow: hidden;
+    /*隱藏選單結束*/
+    transition: max-height 2.3s;
+    margin-top: 1px;
+    /*絕對定位疊在網頁上*/
+    position: absolute;
+    z-index: 100;
+    /*header 80px+1px boder 線條*/
+    top: 45px;
+    /* left: 0; */
+    right: 0;
+    background: #fff;
+  }
+
+  .menu li {
+    float: none;
+    background-color: #fff;
+  }
+
+  .menu li a {
+    display: block;
+    color: #000;
+    padding: 1.5em 2em;
+    text-decoration: none;
+    transition: all 0.3s;
+    border-bottom: 1px solid #e5e5e5;
+
+  }
+
+  .menu li a:hover {
+    background-color: #004785;
+    color: #fff;
+  }
+
+
+  .menu span {
+    font-size: 16px;
+    vertical-align: top;
+  }
+
+  .showmenu {
+    display: block;
+    float: right;
+    color: #000;
+    margin: 1%;
+  }
+
+  .showmenu span {
+    font-size: 50px;
+
+  }
+
+  /*jQ點擊後動態在 body 加上 class */
+  .menu-show .menu {
+    max-height: 1000px;
+  }
+
+
+
+
+  .all {
+    max-width: 768px;
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .kv {
+    max-width: 768px;
+  }
+
+  .kvimg {
+    background-image: url(../images/kv-m.png);
+    padding-bottom: 90%;
+  }
+
+  /* 會員福利 */
+  .article_container {
+    height: 500px;
+  }
+
+  .container_product-lift:hover {
+    padding-bottom: 5%;
+  }
+
+  /* 會員權益一覽表 */
+  .card {
+    width: 100%;
+  }
+
+  .illustrate {
+    padding: 0 5%;
+    margin-bottom: 2%;
+  }
+
+  .open_text {
+    font-size: 20px;
+    padding: 0 5%;
+  }
+
+  .project-text {
+    margin-left: 1em;
+  }
+
+  .product1 span {
+    margin-bottom: 1%;
+  }
+
+  .product1 h3 {
+    margin-bottom: 1%;
+
+  }
+
+  .open_icon {
+    width: 7%;
+  }
+}
+
+
+
+@media screen and (max-width: 415px) {
+  .wrap {
+    max-width: 414px;
+
+  }
+
+  .header {
+    max-width: 414px;
+    width: 100%;
+    height: 50px;
+  }
+
+  .logo {
+    padding: 2% 4%;
+
+  }
+
+  .logo img {
+    width: 65%;
+
+  }
+
+  .showmenu {
+    margin: 2% 4%;
+  }
+
+  .showmenu span {
+    font-size: 40px;
+  }
+
+  .kv {
+    max-width: 414px;
+  }
+
+  .kvimg {
+    padding-bottom: 100%;
+  }
+
+
+  /* 會員福利 */
+  .article_container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .article_container h3 {
+    font-size: 20px;
+  }
+
+  .article_container p {
+    font-size: 16px;
+  }
+
+  .container_product-lift {
+    width: auto;
+    height: 200px;
+    margin-bottom: 2%;
+  }
+
+  .container_product-lift:hover {
+    padding-bottom: 0;
+  }
+
+  .vip-content span {
+    font-size: 30px;
+  }
+
+  .container_product-right {
+    width: auto;
+    height: 400px;
+  }
+
+
+
+  .content4:hover {
+    padding-bottom: 0;
+  }
+
+  /* 會員權益一覽表 */
+  .title {
+    font-size: 20px;
+    height: 50px;
+  }
+
+  .row {
+    font-size: 12px;
+
+  }
+
+  .big {
+    font-size: 18px;
+  }
+
+  .row_title {
+    font-size: 16px;
+  }
+
+  .col_vip br {
+    display: block;
+  }
+
+  .up-text br {
+    display: block;
+  }
+
+
+
+  h3 {
+    font-size: 18px;
+    margin-bottom: 2%;
+  }
+
+  .open_icon {
+    width: 10%;
+  }
+
+  .open_text {
+    font-size: 18px;
+  }
+
+  .illustrate {
+    margin-bottom: 3%;
+  }
+
+  .illustrate-project {
+    padding: 2% 0;
+  }
+
+  .project-title {
+    padding: 4% 1%;
+
+  }
+
+  .project-title span {
+    font-size: 18px;
+  }
+
+}
