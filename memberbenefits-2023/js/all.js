@@ -14,6 +14,9 @@ $(function () {
       $(".project-text_3").toggle(false);
       $(".project-text_4").toggle(false);
       $("body").removeClass("menu-show");
+      $('html,body').animate({
+         scrollTop: $('.project-title_1').offset().top - 80
+      }, 500);
    });
 });
 $(function () {
@@ -23,6 +26,9 @@ $(function () {
       $(".project-text_3").toggle(false);
       $(".project-text_4").toggle(false);
       $("body").removeClass("menu-show");
+      $('html,body').animate({
+         scrollTop: $('.project-title_2').offset().top - 80
+      }, 500);
    });
 });
 $(function () {
@@ -32,6 +38,9 @@ $(function () {
       $(".project-text_2").toggle(false);
       $(".project-text_4").toggle(false);
       $("body").removeClass("menu-show");
+      $('html,body').animate({
+         scrollTop: $('.project-title_3').offset().top - 80
+      }, 500);
    });
 });
 
@@ -42,6 +51,9 @@ $(function () {
       $(".project-text_2").toggle(false);
       $(".project-text_3").toggle(false);
       $("body").removeClass("menu-show");
+      $("html,body").animate({
+         scrollTop: $(".project-title_4").offset().top - 80
+      }, 500);
    });
 });
 
@@ -53,6 +65,9 @@ $(function () {
       $(".project-text_2").toggle(false);
       $(".project-text_3").toggle(false);
       $(".project-text_4").toggle(false);
+      $("html,body").animate({
+         scrollTop: $(".project-title_1").offset().top - 80
+      }, 500);
    });
 });
 $(function () {
@@ -61,6 +76,9 @@ $(function () {
       $(".project-text_1").toggle(false);
       $(".project-text_3").toggle(false);
       $(".project-text_4").toggle(false);
+      $("html,body").animate({
+         scrollTop: $(".project-title_2").offset().top - 80
+      }, 500);
    });
 });
 $(function () {
@@ -69,6 +87,9 @@ $(function () {
       $(".project-text_1").toggle(false);
       $(".project-text_2").toggle(false);
       $(".project-text_4").toggle(false);
+      $("html,body").animate({
+         scrollTop: $(".project-title_3").offset().top - 80
+      }, 500);
    });
 });
 $(function () {
@@ -77,6 +98,9 @@ $(function () {
       $(".project-text_1").toggle(false);
       $(".project-text_2").toggle(false);
       $(".project-text_3").toggle(false);
+      $("html,body").animate({
+         scrollTop: $(".project-title_4").offset().top - 80
+      }, 500);
    });
 });
 
