@@ -1,0 +1,352 @@
+@import "bootstrap/bootstrap";
+
+body {
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+}
+
+// a:hover {
+//     color: $gray-900;
+// }
+
+// 調整內容與navbar的上方間距
+.content-top {
+    padding-top: 56px;
+}
+
+@media (min-width: 768px) {
+    .content-top {
+        padding-bottom: 40px;
+    }
+}
+
+
+// index.html
+// navbar
+.navbar {
+    border-bottom: 1px solid #eee;
+}
+
+.navbar-menu {
+    .down-icon::after {
+        display: none;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0.125em;
+    }
+
+    .dropdown .dropdown-menu {
+        display: none;
+    }
+}
+
+.navbar-bg {
+    background-color: rgb(#fff, .9);
+    backdrop-filter: blur(5px);
+}
+
+.heart-item {
+    display: none;
+}
+
+.search-item {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .heart-item {
+        display: flex;
+    }
+
+    .search-item {
+        display: flex;
+        align-items: center;
+    }
+}
+
+// 輪播
+.kv-bg {
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    transition: all .3s;
+}
+
+@media (min-width: 768px) {
+    .kv-bg {
+        height: 600px;
+    }
+}
+
+.kv-img-1 {
+    background-image: url(../img/kv1.jpg);
+}
+
+.kv-img-2 {
+    background-image: url(../img/kv2.jpg);
+}
+
+.kv-img-3 {
+    background-image: url(../img/kv3.jpg);
+}
+
+.clothing-icon {
+    width: 75%;
+}
+
+// 卡片
+.card {
+    border: 0;
+}
+
+// 使 icon 按鈕浮動定位
+.btn-icon {
+    position: absolute;
+    z-index: 1;
+}
+
+// 定義 icon 基本樣式
+.icon {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+// 設定 heart icon 的互動變數
+$heart-outline-color: '%23333' !default; // 色碼 # 井字要轉譯為 %23，這是 bootstrap icon 的使用規範
+$heart-fill-color: '%23f00' !default;
+
+// 設定 heart icon 在線條圖、實心圖的 SVG 與hover變色，設定 fill='#{$heart-outline-color} 變數
+$heart-icon-outline: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='#{$heart-outline-color}' d='m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z'/></svg>") !default;
+$heart-icon-fill: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='#{$heart-fill-color}' d='M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z'/></svg>") !default;
+$heart-icon-outline-hover: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='#{$heart-fill-color}' d='m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z'/></svg>") !default;
+
+// 指定在不同互動狀態下切換icon
+.icon-heart {
+    background-image: $heart-icon-outline;
+}
+
+.icon-heart:hover {
+    background-image: $heart-icon-outline-hover;
+}
+
+.icon-heart:active {
+    background-image: $heart-icon-fill;
+}
+
+// designer
+.designer {
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        bottom: 3rem;
+    }
+}
+
+// 滾動 top 按鈕
+.scroll-top {
+    width: 40px;
+    height: 40px;
+    bottom: 7%;
+    left: 85%;
+    background-color: rgba(#fff, .8);
+    backdrop-filter: blur(5px);
+    z-index: 100;
+}
+
+@media (min-width: 768px) {
+    .scroll-top {
+        width: 56px;
+        height: 56px;
+        left: 93%;
+    }
+}
+
+
+// featured
+.featured {
+    h2 {
+        top: -50px;
+        left: 50px;
+        transform: translate(-50% -50%);
+        z-index: 1;
+        font-size: 80px;
+    }
+
+    p {
+        width: 30%;
+        bottom: 50px;
+        right: 50px;
+        z-index: 2;
+    }
+}
+
+
+.featured-bg {
+    height: 448px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    transition: all .3s;
+}
+
+.featured-img-1 {
+    background-image: url(../img/fashion1.jpg);
+}
+
+.featured-img-2 {
+    width: 13%;
+    background-image: url(../img/fashion2.jpg);
+}
+
+.featured-img-3 {
+    width: 13%;
+    background-image: url(../img/fashion6.jpg);
+}
+
+.featured-img-4 {
+    width: 13%;
+    background-image: url(../img/fashion4.jpg);
+}
+
+.featured-img-2:hover {
+    width: 61%;
+}
+
+.featured-img-3:hover {
+    width: 61%;
+}
+
+.featured-img-4:hover {
+    width: 61%;
+}
+
+// footer
+footer {
+    a {
+        text-decoration: none;
+        line-height: 2.5;
+    }
+
+}
+
+// 收藏 modal
+.keep-modal .icon-add-cart {
+    border: 0;
+}
+
+
+// redister.html
+.redister-content {
+    padding-top: 100px;
+    padding-bottom: 60px;
+}
+
+
+// product.html
+// 商品色票變數
+$product-color-type-1: url(../img/color1.jpg);
+
+$product-color-type-2: url(../img/color2.jpg);
+
+$product-color-type-3: url(../img/color3.jpg);
+
+.product-content {
+    .accordion-button {
+        background-color: #fff;
+    }
+
+    .product-list {
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+    }
+
+    .product-item-color-1 {
+        background-image: $product-color-type-1;
+    }
+
+    .product-item-color-2 {
+        background-image: $product-color-type-2;
+    }
+
+    .product-item-color-3 {
+        background-image: $product-color-type-3;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .product-content {
+        .sticky-top {
+            top: 80px;
+        }
+    }
+
+}
+
+.product-color {
+    height: 22px;
+    position: relative;
+
+    .product-color-group {
+        position: absolute;
+        z-index: 1;
+
+        .product-color-item {
+            border: 1px solid #999;
+
+            &:active {
+                border: 1px solid #333;
+                box-shadow: 0px 0px 0px 1px #333;
+            }
+        }
+    }
+
+
+}
+
+
+// product-page.html
+.product-pag {
+
+    .product-color-link {
+        padding: 0;
+        border: 0;
+
+        &.active {
+            padding: 0.1rem;
+        }
+
+        label {
+            border: #999;
+        }
+    }
+
+    .accordion-header,
+    .title button {
+        font-size: 14px;
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
+    }
+
+}
+
+
+// cart.html
+.cart-pag .card .toolbar .btn {
+    border: 0;
+
+    .icon {
+        width: 16px;
+        height: 16px;
+        display: flex;
+    }
+}

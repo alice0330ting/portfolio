@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SHOPPER-電商網站</title>
+    <link rel="icon" type="favicon.ico" href="img/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/all.css">
+</head>
+
+<body>
+    <!-- header.html，用js載入 -->
+    <div id="header"></div>
+
+    <div class="wrap" id="wrap">
+        <!-- 輪播 -->
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                    class="active rounded-circle" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    class="rounded-circle" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    class="rounded-circle" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a class="kv-bg kv-img-1 d-block" href="#"></a>
+                </div>
+                <div class="carousel-item">
+                    <a class="kv-bg kv-img-2 d-block" href="#"></a>
+                </div>
+                <div class="carousel-item">
+                    <a class="kv-bg kv-img-3 d-block" href="#"></a>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- 內容 -->
+        <div class="container mx-auto mt-4 px-4">
+            <!-- 分類 -->
+            <div class="card text-center">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col border-end ">
+                            <a href="#" class="d-inline-block">
+                                <img class="clothing-icon mb-3" src="img/shirt-outline.svg" alt="">
+                                <p class="card-title">上衣</p>
+                            </a>
+                        </div>
+                        <div class="col border-end">
+                            <a href="#" class="d-inline-block">
+                                <img class="clothing-icon mb-3" src="img/dress-outline.svg" alt="">
+                                <p class="card-title">洋裝</p>
+                            </a>
+                        </div>
+                        <div class="col border-end">
+                            <a href="#" class="d-inline-block">
+                                <img class="clothing-icon mb-3" src="img/pants-outline.svg" alt="">
+                                <p class="card-title">下身</p>
+                            </a>
+                        </div>
+                        <div class="col border-end">
+                            <a href="#" class="d-inline-block">
+                                <img class="clothing-icon mb-3" src="img/earrings-outline.svg" alt="">
+                                <p class="card-title">配件</p>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="#" class="d-inline-block">
+                                <img class="clothing-icon mb-3" src="img/bag-outline.svg" alt="">
+                                <p class="card-title">包包</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 新品 -->
+            <div class="new-arrival mt-5">
+                <h2 class="text-center mb-5">New Arrival</h2>
+                <div class="row gx-5 gy-3">
+                    <div class="col-md col-6">
+                        <div class="card h-100">
+                            <a href="product-page.html" class="stretched-link"></a>
+                            <img src="img/shirt1.jpg" class="card-img-top" alt="">
+                            <div class="card-body px-0">
+                                <h6 class="card-title fw-bold mb-1">Brand</h6>
+                                <p class="card-text">product name Lorem, ipsum.</p>
+                            </div>
+                            <div
+                                class="card-footer d-flex justify-content-between align-items-start bg-transparent border-0 px-0">
+                                <div class="position-relative">
+                                    <button type="button" class="btn p-0 border-0 btn-icon">
+                                        <span class="icon icon-heart"></span>
+                                    </button>
+                                </div>
+                                <p class="fw-bold mb-0"><span class="small">$</span>3,000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md col-6">
+                        <div class="card h-100">
+                            <a href="product-page.html" class="stretched-link"></a>
+                            <img src="img/shirt1.jpg" class="card-img-top" alt="">
+                            <div class="card-body px-0">
+                                <h6 class="card-title fw-bold mb-1">Brand</h6>
+                                <p class="card-text">product name Lorem, ipsum.</p>
+                            </div>
+                            <div
+                                class="card-footer d-flex justify-content-between align-items-start bg-transparent border-0 px-0">
+                                <div class="position-relative">
+                                    <button type="button" class="btn p-0 border-0 btn-icon">
+                                        <span class="icon icon-heart"></span>
+                                    </button>
+                                </div>
+                                <p class="fw-bold mb-0"><span class="small">$</span>3,000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md col-6">
+                        <div class="card h-100">
+                            <a href="product-page.html" class="stretched-link"></a>
+                            <img src="img/shirt1.jpg" class="card-img-top" alt="">
+                            <div class="card-body px-0">
+                                <h6 class="card-title fw-bold mb-1">Brand</h6>
+                                <p class="card-text">product name Lorem, ipsum.</p>
+                            </div>
+                            <div
+                                class="card-footer d-flex justify-content-between align-items-start bg-transparent border-0 px-0">
+                                <div class="position-relative">
+                                    <button type="button" class="btn p-0 border-0 btn-icon">
+                                        <span class="icon icon-heart"></span>
+                                    </button>
+                                </div>
+                                <p class="fw-bold mb-0"><span class="small">$</span>3,000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md col-6">
+                        <div class="card h-100">
+                            <a href="product-page.html" class="stretched-link"></a>
+                            <img src="img/shirt1.jpg" class="card-img-top" alt="">
+                            <div class="card-body px-0">
+                                <h6 class="card-title fw-bold mb-1">Brand</h6>
+                                <p class="card-text">product name Lorem, ipsum.</p>
+                            </div>
+                            <div
+                                class="card-footer d-flex justify-content-between align-items-start bg-transparent border-0 px-0">
+                                <div class="position-relative">
+                                    <button type="button" class="btn p-0 border-0 btn-icon">
+                                        <span class="icon icon-heart"></span>
+                                    </button>
+                                </div>
+                                <p class="fw-bold mb-0"><span class="small">$</span>3,000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 品牌 -->
+            <div class="designer my-5">
+                <h2 class="text-center mb-5">Designer</h2>
+                <div class="row gx-5 gy-3 align-items-center mb-5">
+                    <div class="col-md-7">
+                        <img class="img-fluid" src="img/fashion10.jpg" alt="">
+                    </div>
+                    <div class="col-md-5">
+                        <h4>Chloé’s artisanal elegance </h4>
+                        <p>Discover the latest styles featuring hand-embroidered details and natural tones </p>
+                        <button type="button" class="btn btn-secondary">前往品牌</button>
+                    </div>
+                </div>
+
+                <!-- 品牌 商品輪播 -->
+                <div class="row gx-5 gy-3 align-items-center mb-5">
+                    <div class="col-md-4">
+                        <h4>Chloé’s artisanal elegance </h4>
+                        <p>Discover the latest styles featuring hand-embroidered details and natural tones </p>
+                        <button type="button" class="btn btn-secondary">前往品牌</button>
+                    </div>
+                    <div class="col-md-8">
+                        <div id="carouselExampleFade" class="carousel slide carousel-fade carousel-dark">
+                            <div class="carousel-inner">
+                                <!-- 輪播1 -->
+                                <div class="carousel-item active">
+                                    <div class="row g-4 flex-nowrap flex-nowrap">
+                                        <div class="col-md-3 col-5">
+                                            <div class="card text-center">
+                                                <a href="#" class="stretched-link"></a>
+                                                <img src="img/shirt1.jpg" class="card-img-top" alt="">
+                                                <div class="card-body px-0">
+                                                    <p class="card-title fw-bold mb-0">Brand</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-5">
+                                            <div class="card text-center">
+                                                <a href="#" class="stretched-link"></a>
+                                                <img src="img/shirt1.jpg" class="card-img-top" alt="">
+                                                <div class="card-body px-0">
+                                                    <p class="card-title fw-bold mb-0">Brand</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-5">
+                                            <div class="card text-center">
+                                                <a href="#" class="stretched-link"></a>
+                                                <img src="img/shirt1.jpg" class="card-img-top" alt="">
+                                                <div class="card-body px-0">
+                                                    <p class="card-title fw-bold mb-0">Brand</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-5">
+                                            <div class="card text-center">
+                                                <a href="#" class="stretched-link"></a>
+                                                <img src="img/shirt1.jpg" class="card-img-top" alt="">
+                                                <div class="card-body px-0">
+                                                    <p class="card-title fw-bold mb-0">Brand</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 輪播2 -->
+                                <div class="carousel-item">
+                                    <div class="row g-4 flex-nowrap">
+                                        <div class="col-md-3 col-5">
+                                            <div class="card text-center">
+                                                <a href="#" class="stretched-link"></a>
+                                                <img src="img/dress1.jpg" class="card-img-top" alt="">
+                                                <div class="card-body px-0">
+                                                    <p class="card-title fw-bold mb-0">Brand</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-5">
+                                            <div class="card text-center">
+                                                <a href="#" class="stretched-link"></a>
+                                                <img src="img/dress1.jpg" class="card-img-top" alt="">
+                                                <div class="card-body px-0">
+                                                    <p class="card-title fw-bold mb-0">Brand</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-5">
+                                            <div class="card text-center">
+                                                <a href="#" class="stretched-link"></a>
+                                                <img src="img/dress1.jpg" class="card-img-top" alt="">
+                                                <div class="card-body px-0">
+                                                    <p class="card-title fw-bold mb-0">Brand</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-5">
+                                            <div class="card text-center">
+                                                <a href="#" class="stretched-link"></a>
+                                                <img src="img/dress1.jpg" class="card-img-top" alt="">
+                                                <div class="card-body px-0">
+                                                    <p class="card-title fw-bold mb-0">Brand</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 輪播3 -->
+                                <div class="carousel-item">
+                                    <div class="row g-4 flex-nowrap">
+                                        <div class="col-md-3 col-5">
+                                            <div class="card text-center">
+                                                <a href="#" class="stretched-link"></a>
+                                                <img src="img/skirt1.jpg" class="card-img-top" alt="">
+                                                <div class="card-body px-0">
+                                                    <p class="card-title fw-bold mb-0">Brand</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-5">
+                                            <div class="card text-center">
+                                                <a href="#" class="stretched-link"></a>
+                                                <img src="img/skirt1.jpg" class="card-img-top" alt="">
+                                                <div class="card-body px-0">
+                                                    <p class="card-title fw-bold mb-0">Brand</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-5">
+                                            <div class="card text-center">
+                                                <a href="#" class="stretched-link"></a>
+                                                <img src="img/skirt1.jpg" class="card-img-top" alt="">
+                                                <div class="card-body px-0">
+                                                    <p class="card-title fw-bold mb-0">Brand</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-5">
+                                            <div class="card text-center">
+                                                <a href="#" class="stretched-link"></a>
+                                                <img src="img/skirt1.jpg" class="card-img-top" alt="">
+                                                <div class="card-body px-0">
+                                                    <p class="card-title fw-bold mb-0">Brand</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev w-auto" type="button"
+                                data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon bg-black" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next w-auto" type="button"
+                                data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                                <span class="carousel-control-next-icon bg-black" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- 三欄 -->
+            <div class="card-group my-5">
+                <div class="row gx-5 gy-5 mb-4">
+                    <div class="col-md-4 col-12">
+                        <div class="card h-100">
+                            <a href="#" class="stretched-link"></a>
+                            <img src="img/fashion7.jpg" class="card-img-top" alt="">
+                            <div class="card-body px-0">
+                                <h6 class="card-title fw-bold mb-1">Brand</h6>
+                                <p class="card-text mb-0">product name Lorem, ipsum. Lorem ipsum, dolor sit amet
+                                    consectetur adipisicing elit. Aperiam, optio?</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 px-0">shop</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <div class="card h-100">
+                            <a href="#" class="stretched-link"></a>
+                            <img src="img/fashion8.jpg" class="card-img-top" alt="">
+                            <div class="card-body px-0">
+                                <h6 class="card-title fw-bold mb-1">Brand</h6>
+                                <p class="card-text mb-0">product name Lorem, ipsum.</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 px-0">shop</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <div class="card h-100">
+                            <a href="#" class="stretched-link"></a>
+                            <img src="img/fashion9.jpg" class="card-img-top" alt="">
+                            <div class="card-body px-0">
+                                <h6 class="card-title fw-bold mb-1">Brand</h6>
+                                <p class="card-text mb-0">product name Lorem, ipsum. Lorem ipsum dolor sit amet.</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 px-0">shop</div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 特輯 -->
+        <div class="featured position-relative">
+            <a class="d-dlock" href="#">
+                <h2 class="position-absolute">Special</h2>
+                <p class="position-absolute">Actor, activist and model Adwoa Aboah on forging communities, disrupting
+                    the media, and embracing a new
+                    challenge
+                </p>
+                <div class="d-flex g-0">
+                    <div class="flex-grow-1 featured-bg featured-img-1">
+                    </div>
+                    <div class="featured-bg featured-img-2">
+                    </div>
+                    <div class="featured-bg featured-img-3">
+                    </div>
+                    <div class="featured-bg featured-img-4">
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </div>
+
+
+    <!-- enjoy-us.html，用js載入 -->
+    <div id="enjoy-us"></div>
+
+
+    <!-- footer.html，用js載入 -->
+    <div id="footer"></div>
+
+    <!-- 右下 top icon，用js載入 -->
+    <div id="scroll-top-icon"></div>
+
+    <!-- axios js 套件 -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+    <!-- js -->
+    <script src="js/all.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SHOPPER-電商網站</title>
+    <link rel="icon" type="favicon.ico" href="img/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/all.css">
+</head>
+
+<body>
+    <!-- header.html，用js載入 -->
+    <div id="header"></div>
+
+    <div class="wrap" id="wrap">
+        <!-- 內容 -->
+        <div class="cart-pag content-top container mx-auto px-4 mb-md-4 mb-5">
+            <h1 class="h2 mt-md-4 mt-3">配送與付款</h1>
+            <hr>
+            <div class="contant mt-md-5 mt-4">
+                <div class="row gx-5 gy-3 justify-content-between">
+                    <!-- 左邊清單 -->
+                    <div class="col-md-5 d-md-block d-none">
+                        <div class="card mb-md-5 mb-4 pb-md-5 pb-4  border-bottom">
+                            <div class="row align-items-stretch">
+                                <div class="col-md-3 col-4">
+                                    <img src="img/shirt1.jpg" class="card-img-top" alt="">
+                                </div>
+                                <div class="col-md-9 col-8">
+                                    <div class="card-body p-0 h-100 d-flex flex-column justify-content-between">
+                                        <h6 class="card-title">Brand</h6>
+                                        <h6 class="card-text">亮片綴飾真絲透膚襯衫</h6>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <p class="mb-2">顏色<span class="ms-1">白</span></p>
+                                            <p class="mb-2">尺寸<span class="ms-1">M</span></p>
+                                            <p class="mb-2">數量<span class="ms-1">1</span></p>
+                                        </div>
+                                        <p class="fw-bold mb-0">小計<span class="small ms-1">$</span>6,000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-md-5 mb-4 pb-md-5 pb-4  border-bottom">
+                            <div class="row align-items-stretch">
+                                <div class="col-md-3 col-4">
+                                    <img src="img/dress1.jpg" class="card-img-top" alt="">
+                                </div>
+                                <div class="col-md-9 col-8">
+                                    <div class="card-body p-0 h-100 d-flex flex-column justify-content-between">
+                                        <h6 class="card-title">Brand</h6>
+                                        <h6 class="card-text">針織修身洋裝</h6>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <p class="mb-2">顏色<span class="ms-1">藍</span></p>
+                                            <p class="mb-2">尺寸<span class="ms-1">M</span></p>
+                                            <p class="mb-2">數量<span class="ms-1">1</span></p>
+                                        </div>
+                                        <p class="fw-bold mb-0">小計<span class="small ms-1">$</span>6,000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 右邊付款資訊 -->
+                    <div class="col-md-6">
+                        <form action="cart.html" class="needs-validation" novalidate>
+                            <div>
+                                <h5 class="fw-bold mb-2">付款方式</h5>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioPay" id="flexRadioPay1"
+                                        required>
+                                    <label class="form-check-label" for="flexRadioPay1">
+                                        線上刷卡
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioPay" id="flexRadioPay2"
+                                        required>
+                                    <label class="form-check-label" for="flexRadioPay2">
+                                        銀行轉帳
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioPay" id="flexRadioPay3"
+                                        required>
+                                    <label class="form-check-label" for="flexRadioPay3">
+                                        貨到付款(超商)
+                                    </label>
+                                    <div class="invalid-feedback">
+                                        <i class="bi bi-exclamation-lg"></i> 請選擇付款方式
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="my-4">
+                                <h5 class="fw-bold mb-2">運送方式</h5>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioShip"
+                                        id="flexRadioAddress" required>
+                                    <label class="form-check-label" for="flexRadioAddress">
+                                        宅配
+                                    </label>
+                                    <div class="pb-3" id="flexRadioAddress">
+                                        <p class="my-2">請填寫收件人資訊</p>
+                                        <div class="row g-2">
+                                            <div class="col-6">
+                                                <input type="text" class="form-control rounded-0" placeholder="姓名"
+                                                    required>
+                                            </div>
+                                            <div class="col-6">
+                                                <input type="tel" class="form-control rounded-0" placeholder="電話"
+                                                    required>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row g-0">
+                                                    <div class="col">
+                                                        <select class="form-select" aria-label="Default select example"
+                                                            required>
+                                                            <option selected>縣/市</option>
+                                                            <option value="1">基隆市</option>
+                                                            <option value="2">台北市</option>
+                                                            <option value="3">新北市</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col">
+                                                        <select class="form-select" aria-label="Default select example"
+                                                            required>
+                                                            <option selected>區/鎮</option>
+                                                            <option value="1">中正區</option>
+                                                            <option value="2">信義區</option>
+                                                            <option value="3">大安區</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col ms-auto">
+                                                        <input type="text" class="form-control rounded-0"
+                                                            placeholder="中正路0號0樓" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <input type="email" class="form-control rounded-0" name="mail" id="mail"
+                                                    placeholder="email信箱" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input " type="radio" name="flexRadioShip"
+                                        id="flexRadioSupermarket" required>
+                                    <label class="form-check-label" for="flexRadioSupermarket">超商取貨</label>
+                                    <div id="flexRadioSupermarket">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <p class="mb-0">中正門市：台北市中正區中正路0號</p>
+                                            <a class="btn btn-outline-secondary" href="#">選擇超商</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="border-top border-bottom py-4 my-4">
+                                <div class="d-flex justify-content-between lh-lg">
+                                    <div class="">商品總金額</div>
+                                    <div>
+                                        <p class="mb-0"><span class="small ms-1">$</span>3,000</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between lh-lg">
+                                    <div class="">運費<span class="small ms-2 text-secondary">(還差$3,000享免運費)</span></div>
+                                    <div>
+                                        <p class="mb-0"><span class="small ms-1">$</span>100</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center my-3">
+                                <div class="">訂單總金額</div>
+                                <div>
+                                    <p class="mb-0 fs-3 fw-bold"><span class="small ms-1">$</span>6,000</p>
+                                </div>
+                            </div>
+                            <a href="pay.html" class="btn btn-secondary w-100 my-2">前往付款</a>
+                            <a href="cart.html" class="btn btn-outline-secondary w-100 mt-3">上一步</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- enjoy-us.html，用js載入 -->
+    <div id="enjoy-us"></div>
+
+    <!-- footer.html，用js載入 -->
+    <div id="footer"></div>
+
+    <!-- 右下 top icon，用js載入 -->
+    <div id="scroll-top-icon"></div>
+
+    <!-- axios js 套件 -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+    <!-- js -->
+    <script src="js/all.js"></script>
+
+
+</body>
+
+</html>
