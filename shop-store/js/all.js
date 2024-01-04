@@ -1,7 +1,7 @@
 // 自己寫的 js
 // header、enjoyUs、footer.html 頁面、scroll-top-icon 載入
 let header = document.getElementById('header');
-axios.get('../components/header.html').then(function (res) {
+axios.get('https://alice0330ting.github.io/portfolio/shop-store/components/header.html').then(function (res) {
     header.innerHTML = res.data;
 })
 let enjoyUs = document.getElementById('enjoy-us');
