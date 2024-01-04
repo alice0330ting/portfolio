@@ -1,0 +1,381 @@
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg navbar-bg fixed-top navbar-menu">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Shopper</a>
+        <!-- 漢堡icon -->
+        <button class="navbar-toggler order-3 border-0" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- 選單 -->
+        <div class="collapse navbar-collapse order-md-0 order-4" id="navbarNavDropdown">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle down-icon" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        所有商品
+                    </a>
+                    <ul class="dropdown-menu border-0 bg-light">
+                        <li><a class="dropdown-item" href="product.html">上衣</a></li>
+                        <li><a class="dropdown-item" href="product.html">洋裝</a></li>
+                        <li><a class="dropdown-item" href="product.html">下身</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="product.html">最新商品</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="product.html">熱銷商品</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle down-icon" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        SALE
+                    </a>
+                    <ul class="dropdown-menu border-0 bg-light">
+                        <li><a class="dropdown-item" href="product.html">50% off</a></li>
+                        <li><a class="dropdown-item" href="product.html">夏日出遊 2件88折</a></li>
+                        <li><a class="dropdown-item" href="product.html">獨家聯名 $199up</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">關於我們</a>
+                </li>
+            </ul>
+        </div>
+        <!-- secnav-right 工具列 -->
+        <ul class="secnav-right navbar-nav flex-row align-items-center ms-auto order-md-3 order-2 fs-6">
+            <li class="nav-item search-item">
+                <form class="collapse collapse-horizontal" id="collapseSearch">
+                    <input class="form-control-sm border-0 rounded-0 bg-light" type="search" name="search" id="search"
+                        placeholder="saerch 搜尋...">
+                </form>
+                <a class="px-2" href="#collapseSearch" data-bs-toggle="collapse"><i class="bi bi-search"></i></a>
+            </li>
+            <li class="nav-item"><a class="px-2" href="#modalAccount" data-bs-toggle="modal"><i
+                        class="bi bi-person"></i></a></li>
+            <li class="nav-item heart-item"><a class="px-2" href="#modalHeart" data-bs-toggle="modal"><i
+                        class="bi bi-heart"></i></a></li>
+            <li class="nav-item"><a class="px-2" href="#modalCart" data-bs-toggle="modal"><i class="bi bi-cart"></i></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+
+
+
+
+<!-- 會員帳戶 modal -->
+<div class="modal fade" id="modalAccount" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content rounded-0">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">我的帳戶</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="index.html" class="mb-2 needs-validation" novalidate>
+                    <div class="mb-3">
+                        <label class="form-label" for="account">email 帳號</label>
+                        <input class="form-control" type="email" name="account" id="account" placeholder="email 帳號"
+                            required>
+                        <div class="invalid-feedback">
+                            請輸入您的 email 帳號
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="password">密碼</label>
+                        <input class="form-control" type="password" name="password" id="password" placeholder="輸入密碼"
+                            required>
+                        <div class="invalid-feedback">
+                            請輸入您的密碼
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 mb-2">登入</button>
+                    <a href="forget-password.html" class="">忘記密碼？</a>
+                </form>
+            </div>
+            <div class="modal-footer fs-6 justify-content-center">
+                <p>還沒成為會員？</p><a href="register.html">前往註冊</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 收藏 modal -->
+<div class="modal fade keep-modal" id="modalHeart" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content rounded-0">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">收藏清單</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <table class="table align-middle">
+                    <tbody>
+                        <tr>
+                            <td scope="row" class="w-25">
+                                <a href="product-page.html">
+                                    <img class="img-fluid" src="img/shirt1.jpg" alt="">
+                                </a>
+                            </td>
+                            <td scope="col">
+                                <a href="product-page.html">
+                                    <h6 class="fw-bold">微透肌感雙口袋立體雕花襯衫</h6>
+                                </a>
+                                <ul class="list-unstyled d-flex justify-content-between align-items-center mb-0">
+                                    <li class="me-2">
+                                        <span class="me-1">顏色</span><span class="fw-bold">白</span>
+                                    </li>
+                                    <li class="me-2">
+                                        <span class="me-1">尺寸</span><span class="fw-bold">M</span>
+                                    </li>
+                                    <li class="me-2">
+                                        <span class="me-1">數量</span><span class="fw-bold">1</span>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="btn fs-3 icon-add-cart">
+                                            <i class="bi bi-cart-plus"></i>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="w-25">
+                                <a href="product-page.html">
+                                    <img class="img-fluid" src="img/dress1.jpg" alt="">
+                                </a>
+                            </td>
+                            <td scope="col">
+                                <a href="product-page.html">
+                                    <h6 class="fw-bold">針織修身洋裝</h6>
+                                </a>
+                                <ul class="list-unstyled d-flex justify-content-between align-items-center mb-0">
+                                    <li class="me-2">
+                                        <span class="me-1">顏色</span><span class="fw-bold">藍</span>
+                                    </li>
+                                    <li class="me-2">
+                                        <span class="me-1">尺寸</span><span class="fw-bold">M</span>
+                                    </li>
+                                    <li class="me-2">
+                                        <span class="me-1">數量</span><span class="fw-bold">1</span>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="btn fs-3 icon-add-cart">
+                                            <i class="bi bi-cart-plus"></i>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="w-25">
+                                <a href="product-page.html">
+                                    <img class="img-fluid" src="img/skirt1.jpg" alt="">
+                                </a>
+                            </td>
+                            <td scope="col">
+                                <a href="product-page.html">
+                                    <h6 class="fw-bold">簍空雕花長裙</h6>
+                                </a>
+                                <ul class="list-unstyled d-flex justify-content-between align-items-center mb-0">
+                                    <li class="me-2">
+                                        <span class="me-1">顏色</span><span class="fw-bold">白</span>
+                                    </li>
+                                    <li class="me-2">
+                                        <span class="me-1">尺寸</span><span class="fw-bold">M</span>
+                                    </li>
+                                    <li class="me-2">
+                                        <span class="me-1">數量</span><span class="fw-bold">1</span>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="btn fs-3 icon-add-cart">
+                                            <i class="bi bi-cart-plus"></i>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="w-25">
+                                <a href="product-page.html">
+                                    <img class="img-fluid" src="img/shirt1.jpg" alt="">
+                                </a>
+                            </td>
+                            <td scope="col">
+                                <a href="product-page.html">
+                                    <h6 class="fw-bold">微透肌感雙口袋立體雕花襯衫</h6>
+                                </a>
+                                <ul class="list-unstyled d-flex justify-content-between align-items-center mb-0">
+                                    <li class="me-2">
+                                        <span class="me-1">顏色</span><span class="fw-bold">白</span>
+                                    </li>
+                                    <li class="me-2">
+                                        <span class="me-1">尺寸</span><span class="fw-bold">M</span>
+                                    </li>
+                                    <li class="me-2">
+                                        <span class="me-1">數量</span><span class="fw-bold">1</span>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="btn fs-3 icon-add-cart">
+                                            <i class="bi bi-cart-plus"></i>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="w-25">
+                                <a href="product-page.html">
+                                    <img class="img-fluid" src="img/dress1.jpg" alt="">
+                                </a>
+                            </td>
+                            <td scope="col">
+                                <a href="product-page.html">
+                                    <h6 class="fw-bold">針織修身洋裝</h6>
+                                </a>
+                                <ul class="list-unstyled d-flex justify-content-between align-items-center mb-0">
+                                    <li class="me-2">
+                                        <span class="me-1">顏色</span><span class="fw-bold">藍</span>
+                                    </li>
+                                    <li class="me-2">
+                                        <span class="me-1">尺寸</span><span class="fw-bold">M</span>
+                                    </li>
+                                    <li class="me-2">
+                                        <span class="me-1">數量</span><span class="fw-bold">1</span>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="btn fs-3 icon-add-cart">
+                                            <i class="bi bi-cart-plus"></i>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="w-25">
+                                <a href="product-page.html">
+                                    <img class="img-fluid" src="img/skirt1.jpg" alt="">
+                                </a>
+                            </td>
+                            <td scope="col">
+                                <a href="product-page.html">
+                                    <h6 class="fw-bold">簍空雕花長裙</h6>
+                                </a>
+                                <ul class="list-unstyled d-flex justify-content-between align-items-center mb-0">
+                                    <li class="me-2">
+                                        <span class="me-1">顏色</span><span class="fw-bold">白</span>
+                                    </li>
+                                    <li class="me-2">
+                                        <span class="me-1">尺寸</span><span class="fw-bold">M</span>
+                                    </li>
+                                    <li class="me-2">
+                                        <span class="me-1">數量</span><span class="fw-bold">1</span>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="btn fs-3 icon-add-cart">
+                                            <i class="bi bi-cart-plus"></i>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer border-0 pt-0">
+                <a href="wishlist.html" class="btn btn-primary w-100">前往收藏清單</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 購物車 modal -->
+<div class="modal fade" id="modalCart" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content rounded-0">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">購物車</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <table class="table align-middle">
+                    <tbody>
+                        <tr>
+                            <td scope="row" class="w-25">
+                                <a href="product-page.html">
+                                    <img class="img-fluid" src="img/shirt1.jpg" alt="">
+                                </a>
+                            </td>
+                            <td scope="col">
+                                <a href="product-page.html">
+                                    <h6 class="mb-4 fw-bold">微透肌感雙口袋立體雕花襯衫</h6>
+                                </a>
+
+                                <ul class="list-unstyled d-flex justify-content-between">
+                                    <li class="me-2">
+                                        <span class="me-1">顏色</span><span class="fw-bold">白</span>
+                                    </li>
+                                    <li class="me-2">
+                                        <span class="me-1">尺寸</span><span class="fw-bold">M</span>
+                                    </li>
+                                    <li class="me-2">
+                                        <span class="me-1">數量</span><span class="fw-bold">1</span>
+                                    </li>
+                                    <li>
+                                        <span class="me-1">金額</span><span class="small">$</span><span
+                                            class="fw-bold">3,000</span>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="w-25">
+                                <a href="product-page.html">
+                                    <img class="img-fluid" src="img/dress1.jpg" alt="">
+                                </a>
+                            </td>
+                            <td scope="col">
+                                <a href="product-page.html">
+                                    <h6 class="mb-4 fw-bold">針織修身洋裝</h6>
+                                </a>
+
+                                <ul class="list-unstyled d-flex justify-content-between">
+                                    <li class="me-2">
+                                        <span class="me-1">顏色</span><span class="fw-bold">藍</span>
+                                    </li>
+                                    <li class="me-2">
+                                        <span class="me-1">尺寸</span><span class="fw-bold">M</span>
+                                    </li>
+                                    <li class="me-2">
+                                        <span class="me-1">數量</span><span class="fw-bold">1</span>
+                                    </li>
+                                    <li>
+                                        <span class="me-1">金額</span><span class="small">$</span><span
+                                            class="fw-bold">3,000</span>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot class="">
+                        <tr>
+                            <td scope="row" class="fw-bold">總金額</td>
+                            <td scope="col" class="fw-bold text-end"><span class="small">$</span><span>6,000</span>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+            </div>
+            <div class="modal-footer border-0 pt-0">
+                <a href="cart.html" class="btn btn-primary w-100">前往結帳</a>
+            </div>
+        </div>
+    </div>
+</div>
