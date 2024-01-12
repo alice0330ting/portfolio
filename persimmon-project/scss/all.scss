@@ -45,18 +45,67 @@ html * {
     font-family: MyCustomFont !important;
 }
 
-/* 英文用 Inter */
+// 英文用 Inter
 @font-face {
     font-family: MyCustomFont;
     src: local("Inter Light"), local(Segoe UI), local(Helvetica);
     unicode-range: U+00-024F;
 }
 
-/* 中文用思原黑 */
+// 中文用思原黑
 @font-face {
     font-family: MyCustomFont;
     src: local("Noto Sans TC"), local("微軟正黑體"), local("Microsoft JhengHei");
     unicode-range: U+4E00-9FFF;
+}
+
+// RWD
+@mixin max-width-1600 {
+    @media (max-width:1600px) {
+        @content;
+    }
+}
+
+@mixin max-width-1400 {
+    @media (max-width:1400px) {
+        @content;
+    }
+}
+
+@mixin max-width-1200 {
+    @media (max-width:1200px) {
+        @content;
+    }
+}
+
+@mixin max-width-992 {
+    @media (max-width:992px) {
+        @content;
+    }
+}
+
+@mixin max-width-768 {
+    @media (max-width:768px) {
+        @content;
+    }
+}
+
+@mixin max-width-576 {
+    @media (max-width:576px) {
+        @content;
+    }
+}
+
+@mixin max-width-431 {
+    @media (max-width:431px) {
+        @content;
+    }
+}
+
+@mixin max-width-and-min-width ($max-w, $min-w) {
+    @media (max-width:$max-w) and (min-width:$min-w) {
+        @content;
+    }
 }
 
 
@@ -87,6 +136,7 @@ html * {
     left: 0;
     right: 0;
 
+    // 背景左右半圓圖案
     .main-bg-1 {
         height: 1920px;
 
@@ -100,6 +150,41 @@ html * {
             top: -20%;
             right: 45%;
             z-index: -1;
+
+            @include max-width-1600() {
+                top: -13%;
+            }
+
+            @include max-width-1400() {
+                top: -12%;
+            }
+
+            @include max-width-1200() {
+                top: -10%;
+            }
+
+            @include max-width-992() {
+                padding-top: 100%;
+                right: 40%;
+                top: -4%;
+            }
+
+            @include max-width-768() {
+                right: 38%;
+                top: -2%;
+            }
+
+            @include max-width-576() {
+                padding-top: 120%;
+                right: 35%;
+                top: -1%;
+            }
+
+            @include max-width-431() {
+                padding-top: 140%;
+            }
+
+
         }
 
         &::after {
@@ -112,9 +197,44 @@ html * {
             top: -20%;
             left: 45%;
             z-index: -1;
+
+            @include max-width-1600() {
+                top: -13%;
+            }
+
+            @include max-width-1400() {
+                top: -12%;
+            }
+
+            @include max-width-1200() {
+                top: -10%;
+            }
+
+            @include max-width-992() {
+                padding-top: 100%;
+                left: 40%;
+                top: -4%;
+            }
+
+            @include max-width-768() {
+                left: 38%;
+                top: -2%;
+            }
+
+            @include max-width-576() {
+                padding-top: 120%;
+                left: 35%;
+                top: -1%;
+            }
+
+            @include max-width-431() {
+                padding-top: 140%;
+            }
+
         }
     }
 
+    // 背景下方半圓
     .main-bg-2 {
         width: 170%;
         padding-top: 120%;
@@ -125,135 +245,17 @@ html * {
         top: 30%;
         z-index: -1;
         transform: translate(-50%, 0);
-    }
-}
 
-@media (max-width:1600px) {
-    .bg-box {
-        .main-bg-1 {
-            &::before {
-                top: -13%;
-            }
-
-            &::after {
-                top: -13%;
-            }
-        }
-
-    }
-}
-
-
-@media (max-width:1400px) {
-    .bg-box {
-        .main-bg-1 {
-            &::before {
-                top: -12%;
-            }
-
-            &::after {
-                top: -12%;
-            }
-        }
-
-    }
-}
-
-@media (max-width:1200px) {
-    .bg-box {
-        .main-bg-1 {
-            &::before {
-                top: -10%;
-            }
-
-            &::after {
-                top: -10%;
-            }
-        }
-
-    }
-}
-
-
-@media (max-width:992px) {
-    .bg-box {
-        .main-bg-1 {
-            &::before {
-                padding-top: 100%;
-                right: 40%;
-                top: -4%;
-            }
-
-            &::after {
-                padding-top: 100%;
-                left: 40%;
-                top: -4%;
-            }
-        }
-
-    }
-}
-
-@media (max-width:768px) {
-    .bg-box {
-        .main-bg-1 {
-            &::before {
-                right: 38%;
-                top: -2%;
-            }
-
-            &::after {
-                left: 38%;
-                top: -2%;
-            }
-        }
-
-    }
-}
-
-@media (max-width:576px) {
-    .bg-box {
-        .main-bg-1 {
-            &::before {
-                padding-top: 120%;
-                right: 35%;
-                top: -1%;
-            }
-
-            &::after {
-                padding-top: 120%;
-                left: 35%;
-                top: -1%;
-            }
-        }
-
-        .main-bg-2 {
+        @include max-width-576() {
             top: 28%;
         }
 
-    }
-}
-
-@media (max-width:431px) {
-    .bg-box {
-        .main-bg-1 {
-            &::before {
-                padding-top: 140%;
-            }
-
-            &::after {
-                padding-top: 140%;
-            }
-        }
-
-        .main-bg-2 {
+        @include max-width-431() {
             top: 23%;
         }
 
     }
 }
-
-
 
 
 // menu，視窗捲到指定位置才會顯示按鈕控制offcanvas
@@ -292,6 +294,22 @@ html * {
     background: url(../images/offcanvas-bg.png) no-repeat;
     background-size: cover;
     background-position: 0 100%;
+
+    @include max-width-1400() {
+        padding-left: 70%;
+    }
+
+    @include max-width-992() {
+        padding-left: 90%;
+    }
+
+    @include max-width-576() {
+        padding-left: 100%;
+    }
+
+    @include max-width-431() {
+        padding-left: 120%;
+    }
 }
 
 // .circle-bg {
@@ -305,63 +323,31 @@ html * {
 //     border-radius: 50%;
 // }
 
-@media (max-width:1400px) {
-    .offcanvas {
-        padding-left: 70%;
-    }
-}
-
-@media (max-width:992px) {
-    .offcanvas {
-        padding-left: 90%;
-    }
-}
-
-@media (max-width:576px) {
-    .offcanvas {
-        padding-left: 100%;
-    }
-}
-
-@media (max-width:431px) {
-    .offcanvas {
-        padding-left: 120%;
-    }
-}
 
 .offcanvas-body {
     padding-left: 100px !important;
     padding-right: 100px !important;
-}
 
-@media (max-width:1199px) and (min-width:993px) {
-    .offcanvas-body {
+    @include max-width-and-min-width (1199px, 993px) {
         padding-left: 40px !important;
         padding-right: 40px !important;
     }
-}
 
-@media (max-width:992px) {
-    .offcanvas-body {
+    @include max-width-992() {
         padding-left: 50px !important;
         padding-right: 50px !important;
     }
-}
 
-@media (max-width:768px) {
-    .offcanvas-body {
+    @include max-width-768() {
         padding-left: 20px !important;
         padding-right: 20px !important;
     }
-}
 
-@media (max-width:576px) {
-    .offcanvas-body {
+    @include max-width-576() {
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
 }
-
 
 
 // KV
@@ -371,13 +357,47 @@ html * {
     margin-bottom: 5%;
     padding: 0;
 
+    @include max-width-992() {
+        margin-bottom: 3%;
+    }
+
+
     .kv-content {
         margin-top: 10%;
+
+        @include max-width-992() {
+            margin-top: 18%;
+        }
+
+        @include max-width-576() {
+            margin-top: 20%;
+        }
+
+        @include max-width-431() {
+            margin-top: 25%;
+        }
+
+        & p {
+            @include max-width-431() {
+                line-height: 1;
+            }
+        }
     }
 
     .kv-logo {
         width: 80px;
+
+        @include max-width-431() {
+            width: 70px;
+        }
     }
+
+    .kv-fruit {
+        @include max-width-431() {
+            width: 80%;
+        }
+    }
+
 
     // 左右側欄 side-menu、follow us
     .side-menu,
@@ -388,56 +408,17 @@ html * {
             padding: 0.8rem;
         }
     }
-}
 
-
-@media (max-width:992px) {
-    .kv {
-        margin-bottom: 3%;
-
-        .kv-content {
-            margin-top: 18%;
-        }
-
-    }
-}
-
-
-@media (max-width:576px) {
-    .kv {
-        .kv-content {
-            margin-top: 20%;
-        }
-
-        .side-follow li:first-child {
+    .side-follow li:first-child {
+        @include max-width-576() {
             padding-top: 0.8rem;
         }
-
     }
+
 }
 
 
-@media (max-width:431px) {
-    .kv {
-        .kv-content {
-            margin-top: 25%;
-        }
-
-        .kv-content p {
-            line-height: 1;
-        }
-
-        .kv-logo {
-            width: 70px;
-        }
-
-        .kv-fruit {
-            width: 80%;
-        }
-    }
-}
-
-// 主要內容
+// 主要內容框架
 .main-container-bg {
     background-color: $light;
 }
@@ -454,105 +435,122 @@ html * {
     height: 500px;
     margin-bottom: 10%;
 
+    @include max-width-768() {
+        height: 400px;
+    }
+
+    @include max-width-and-min-width(767px, 577px) {
+        width: 80%;
+        height: fit-content;
+        margin: 0 auto 10%;
+    }
+
+    @include max-width-576() {
+        width: 80%;
+        height: auto;
+        margin: 0 auto 10%;
+    }
+
+
     .content-group-img {
         width: 100%;
         height: 100%;
         opacity: 0;
+
+        @include max-width-and-min-width(767px, 577px) {
+            height: 250px;
+            margin-bottom: 5%;
+        }
+
+        @include max-width-576() {
+            height: 250px;
+            margin-bottom: 5%;
+        }
+
+        @include max-width-431() {
+            height: 200px;
+        }
+
     }
 
     .content-text {
         width: 60%;
         padding: 0 6%;
         opacity: 0;
-    }
 
-}
-
-@media (max-width:768px) {
-    .content-group {
-        height: 400px;
-    }
-}
-
-@media (max-width:767px) and (min-width:577px) {
-    .content-group {
-        width: 80%;
-        height: fit-content;
-        margin: 0 auto 10%;
-
-        .content-group-img {
-            height: 250px;
-            margin-bottom: 5%;
+        @include max-width-and-min-width(767px, 577px) {
+            width: 100%;
+            padding: 0;
         }
 
-        .content-text {
+        @include max-width-576() {
             width: 100%;
             padding: 0;
         }
 
     }
+
 }
 
-@media (max-width:576px) {
-    .content-group {
-        width: 80%;
-        height: auto;
-        margin: 0 auto 10%;
-
-        .content-group-img {
-            height: 250px;
-            margin-bottom: 5%;
-        }
-
-        .content-text {
-            width: 100%;
-            padding: 0;
-        }
-    }
-}
-
-@media (max-width:431px) {
-    .content-group {
-        .content-group-img {
-            height: 200px;
-        }
-    }
-}
 
 .pic-about {
     background: url(../images/about.jpg) no-repeat;
     background-size: cover;
     border-radius: 50px;
-}
 
-@media (max-width:1400px) {
-    .pic-about {
+    @include max-width-1400() {
         border-radius: 0 50px 50px 0;
     }
-}
 
-@media (max-width:767px) {
-    .pic-about {
+    @include max-width-768() {
         border-radius: 0 50px 0 50px;
     }
+
 }
+
 
 // 最新消息
 .news {
     margin-bottom: 10%;
 
-    .news-title {
+    &-title {
         white-space: nowrap;
         padding-right: 6%;
+
+        @include max-width-1400() {
+            padding: 0 6%;
+        }
     }
 
     .pic-news {
         border-radius: 50px;
     }
 
+    .card-box {
+        @include max-width-576() {
+            overflow-x: auto;
+        }
+    }
+
     .card-group {
         margin-left: auto;
         flex-wrap: nowrap;
+
+        @include max-width-and-min-width(991px, 769px) {
+            padding: 0 6%;
+        }
+
+        @include max-width-768() {
+            padding: 0 6%;
+        }
+
+        @include max-width-576() {
+            width: 1000px;
+        }
+
+        @include max-width-431() {
+            width: 800px;
+        }
     }
 
     .card a {
@@ -575,60 +573,26 @@ html * {
 }
 
 
-@media (max-width:1400px) {
-    .news {
-
-        .news-title {
-            padding: 0 6%;
-        }
-    }
-}
-
-@media (max-width:992px) and (min-width:769px) {
-    .news {
-        .card-group {
-            padding: 0 6%;
-        }
-    }
-}
-
-@media (max-width:768px) {
-    .news {
-        .card-group {
-            padding: 0 6%;
-        }
-    }
-}
-
-@media (max-width:576px) {
-    .news {
-        .card-box {
-            overflow-x: auto;
-        }
-
-        .card-group {
-            width: 1000px;
-        }
-    }
-}
-
-@media (max-width:431px) {
-    .news {
-        .card-box {
-            overflow-x: auto;
-        }
-
-        .card-group {
-            width: 800px;
-        }
-    }
-}
-
-
 // 樹
 .tree {
     left: -50px;
     padding-bottom: 3%;
+
+    @include max-width-and-min-width (767px, 577px) {
+        left: 0;
+    }
+
+    @include max-width-576() {
+        left: 0;
+    }
+
+    @include max-width-and-min-width (575px, 432px) {
+        left: -40px;
+    }
+
+    @include max-width-431() {
+        left: -30px;
+    }
 
     .pic-tree {
         width: 1104px;
@@ -636,87 +600,47 @@ html * {
         background: url(../images/樹.png) no-repeat;
         background-size: cover;
         background-position-x: right;
-    }
-}
 
-@media (max-width:1199px) and (min-width:993px) {
-    .tree {
-        .pic-tree {
+        @include max-width-and-min-width (1199px, 993px) {
             width: 950px;
             height: 240px;
         }
-    }
-}
 
-@media (max-width:992px) {
-    .tree {
-        .pic-tree {
+        @include max-width-992() {
             width: 950px;
             height: 240px;
         }
-    }
-}
 
-@media (max-width:991px) and (min-width:767px) {
-    .tree {
-        .pic-tree {
+        @include max-width-and-min-width (991px, 769px) {
             width: 800px;
             height: 200px;
         }
-    }
-}
 
-@media (max-width:768px) {
-    .tree {
-        .pic-tree {
+        @include max-width-768() {
             width: 760px;
             height: 200px;
         }
-    }
-}
 
-@media (max-width:767px) and (min-width:577px) {
-    .tree {
-        left: 0;
-
-        .pic-tree {
-            width: 600px;
+        @include max-width-and-min-width (767px, 577px) {
+            width: 580px;
             height: 150px;
         }
-    }
-}
 
-@media (max-width:576px) {
-    .tree {
-        left: 0;
-
-        .pic-tree {
+        @include max-width-576() {
             width: 560px;
             height: 150px;
         }
-    }
-}
 
-@media (max-width:575px) and (min-width:432px) {
-    .tree {
-        left: -40px;
-
-        .pic-tree {
+        @include max-width-and-min-width (575px, 432px) {
             width: 480px;
             height: 120px;
         }
-    }
-}
 
-@media (max-width:431px) {
-    .tree {
-        left: -30px;
-
-        .pic-tree {
+        @include max-width-431() {
             width: 410px;
             height: 110px;
-
         }
+
     }
 }
 
@@ -727,8 +651,32 @@ html * {
     padding: 70px;
     opacity: 0%;
 
+    @include max-width-1400() {
+        margin: 0 6%;
+    }
+
+    @include max-width-and-min-width(1199, 993) {
+        padding: 60px 20px;
+    }
+
+    @include max-width-992() {
+        padding: 60px 20px;
+    }
+
+    @include max-width-431() {
+        padding: 40px 10px;
+    }
+
     .content-title {
         width: 80%;
+
+        @include max-width-576() {
+            width: 90%;
+        }
+
+        @include max-width-431() {
+            width: 95%;
+        }
     }
 
     .varieties-fruit {
@@ -738,24 +686,76 @@ html * {
     .card {
         width: 70%;
         margin-bottom: 10%;
+
+        @include max-width-1200() {
+            width: 85%;
+        }
+
+        @include max-width-431() {
+            width: 90%;
+        }
     }
 
     .pic-tag {
         left: -30px;
+
+        @include max-width-992() {
+            left: -10px;
+        }
+
+        @include max-width-768() {
+            width: 25%;
+        }
+
+        @include max-width-576() {
+            width: 20%;
+        }
+
     }
 
     .card-img-box {
         width: 45%;
+
+        @include max-width-and-min-width(767, 577) {
+            width: 40%;
+            margin-bottom: -20px;
+        }
+
+        @include max-width-576() {
+            width: 65%;
+            margin-bottom: -20px;
+        }
+
     }
 
     .card-body {
         width: 55%;
+
+        @include max-width-1200() {
+            width: 65%;
+        }
+
+        @include max-width-and-min-width(767px, 577px) {
+            width: 80%;
+        }
+
+        @include max-width-576() {
+            width: 100%;
+        }
 
         .list-item {
             display: flex;
             align-items: center;
             padding: 12px 0;
             margin: 0;
+
+            @include max-width-768() {
+                align-items: start;
+            }
+
+            @include max-width-576() {
+                padding: 8px 0;
+            }
         }
 
         .list-title {
@@ -765,6 +765,11 @@ html * {
             font-size: 20px;
             font-weight: 400;
             white-space: nowrap;
+
+            @include max-width-768() {
+                width: 70px;
+                font-size: 16px;
+            }
         }
 
         .list-content {
@@ -772,139 +777,23 @@ html * {
             padding: 0;
             margin-left: 24px;
 
+            @include max-width-576() {
+                margin-left: 15px;
+            }
+
             .text {
                 margin-left: 3%;
             }
         }
 
-    }
-}
-
-@media (max-width:1400px) {
-    .varieties {
-        margin: 0 6%;
-    }
-}
-
-@media (max-width:1200px) and (min-width:993px) {
-    .varieties {
-        padding: 60px 20px;
-    }
-}
-
-@media (max-width:992px) {
-    .varieties {
-        padding: 60px 20px;
-
-        .card {
-            width: 80%;
-        }
-
-        .pic-tag {
-            left: -10px;
-        }
-
-    }
-}
-
-@media (max-width:768px) {
-    .varieties {
-
-        .card {
-            width: 100%;
-        }
-
-        .card-img-box {
-            width: 35%;
-        }
-
-        .pic-tag {
-            width: 25%;
-        }
-
-        .card-body {
-            .list-item {
-                align-items: start;
-
-                .list-title {
-                    width: 70px;
-                    font-size: 16px;
-                }
-
+        .progress {
+            @include max-width-431() {
+                width: 60% !important;
             }
         }
     }
 }
 
-@media (max-width:767px) and (min-width:577px) {
-    .varieties {
-        .card-img-box {
-            width: 40%;
-            margin-bottom: -20px;
-        }
-
-        .card-body {
-            width: 70%;
-        }
-    }
-}
-
-@media (max-width:576px) {
-    .varieties {
-        .content-title {
-            width: 90%;
-        }
-
-        .pic-tag {
-            width: 20%;
-        }
-
-        .card-img-box {
-            width: 65%;
-            margin-bottom: -20px;
-        }
-
-        .card {
-            width: 80%;
-        }
-
-        .card-body {
-            width: 100%;
-
-            .list-item {
-                padding: 8px 0;
-            }
-
-            .list-content {
-                margin-left: 15px;
-            }
-
-        }
-    }
-}
-
-@media (max-width:431px) {
-    .varieties {
-        padding: 40px 10px;
-
-        .content-title {
-            width: 95%;
-        }
-
-        .card {
-            width: 90%;
-        }
-
-        .card-body {
-            .list-content {
-                .progress {
-                    width: 60% !important;
-                }
-            }
-        }
-
-    }
-}
 
 // 園主介紹
 .farmer {
@@ -916,20 +805,15 @@ html * {
     background-size: cover;
     border-radius: 50px;
 
-}
-
-@media (max-width:1400px) {
-    .pic-farmer {
+    @include max-width-1400() {
         border-radius: 0 50px 50px 0;
     }
-}
 
-@media (max-width:767px) {
-    .pic-farmer {
+    @include max-width-768() {
         border-radius: 0 50px 0 50px;
     }
-}
 
+}
 
 
 // 直銷商店
@@ -952,26 +836,34 @@ html * {
     background: url(../images/store.jpg) no-repeat;
     background-size: cover;
     border-radius: 50px;
-}
 
-@media (max-width:1400px) {
-    .pic-store {
+    @include max-width-1400() {
         border-radius: 50px 0 0 50px;
     }
-}
 
-@media (max-width:767px) {
-    .pic-store {
+    @include max-width-768() {
         border-radius: 0 50px 0 50px;
     }
-}
 
+}
 
 
 // 預約採果體驗
 .reservation {
     padding-bottom: 8%;
     overflow: hidden;
+
+    @include max-width-1400() {
+        padding-bottom: 10%;
+    }
+
+    @include max-width-768() {
+        padding-bottom: 15%;
+    }
+
+    @include max-width-576() {
+        padding-bottom: 20%;
+    }
 
     &::after {
         content: '';
@@ -984,9 +876,48 @@ html * {
         left: 50%;
         bottom: 10%;
         transform: translate(-50%, 0);
+
+        @include max-width-992() {
+            bottom: 4%;
+        }
+
+        @include max-width-768() {
+            bottom: 6%;
+        }
+
+        @include max-width-and-min-width(767px, 577px) {
+            padding-top: 100%;
+        }
+
+        @include max-width-576() {
+            padding-top: 140%;
+            bottom: 4%;
+        }
+
+        @include max-width-and-min-width(575px, 432px) {
+            padding-top: 180%;
+        }
+
+        @include max-width-431() {
+            width: 250%;
+            padding-top: 250%;
+            bottom: 4%;
+        }
+    }
+
+    .content-title {
+        @include max-width-576() {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 
     .content-body {
+        @include max-width-431() {
+            padding: 0 5%;
+        }
+
         span {
             display: inline-block;
             margin: 0 3%;
@@ -1008,60 +939,22 @@ html * {
         width: 0.5px;
         height: 100%;
         background-color: #958781;
-    }
-}
 
-@media (max-width:1400px) {
-    .reservation {
-        padding-bottom: 10%;
-    }
-}
-
-@media (max-width:992px) {
-    .reservation {
-        &::after {
-            bottom: 4%;
-        }
-    }
-}
-
-@media (max-width:768px) {
-    .reservation {
-        padding-bottom: 15%;
-
-        &::after {
-            bottom: 6%;
-        }
-    }
-}
-
-
-@media (max-width:576px) {
-    .reservation {
-        padding-bottom: 20%;
-
-        .content-title {
-            width: 90%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .border-rule {
+        @include max-width-576() {
             width: 90%;
             height: 0.5px;
             margin: 5% 0;
         }
+    }
 
-        &::after {
-            padding-top: 140%;
-            bottom: 4%;
-        }
-
-        a {
+    a {
+        @include max-width-576() {
             width: 80%;
         }
     }
+
 }
+
 
 @media (max-width:431px) {
     .reservation {
@@ -1112,8 +1005,8 @@ html * {
 .animation-pulse {
     transform: scaleX(1) rotate(15deg);
     transition: 1s;
-}
 
-.animation-pulse:hover {
-    transform: scale3d(1.05, 1.05, 1.05) rotate(15deg);
+    &:hover {
+        transform: scale3d(1.05, 1.05, 1.05) rotate(15deg);
+    }
 }
