@@ -1,0 +1,419 @@
+// index.html主要內容
+// feature
+.feature {
+    padding: 5% 2%;
+
+    .column {
+        @include flex-ai-center;
+    }
+
+    .item {
+        padding-top: 3%;
+    }
+
+    h2 {
+        font-weight: bold;
+    }
+
+    h3 {
+        padding: 3% 0;
+        text-align: center;
+    }
+
+    .feature-img {
+        max-width: 200px;
+        width: 100%;
+        height: 200px;
+        border-radius: 200px;
+        margin-bottom: 3%;
+        background-size: cover;
+    }
+
+    .feature-1 {
+        background-image: url("https://images.unsplash.com/photo-1626788460425-80be45dd088d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjEwfHx2ZWdldGFibGV8ZW58MHx8MHx8fDA%3D");
+    }
+
+    .feature-2 {
+        background-image: url("https://images.unsplash.com/photo-1572715376701-98568319fd0b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fHw%3D");
+    }
+
+    .feature-3 {
+        background-image: url("https://images.unsplash.com/photo-1571805529673-0f56b922b359?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fHw%3D");
+    }
+
+}
+
+@include pad {
+    .feature {
+        padding: 8% 3% 5%;
+
+        .column {
+            padding: 3% 3% 5%;
+        }
+
+        img {
+            max-width: 80%;
+        }
+    }
+
+}
+
+@include mobile {
+    .feature {
+        padding: 8% 12% 5%;
+
+        .column {
+            padding: 3% 1% 5%;
+        }
+
+        img {
+            max-width: 50%;
+        }
+
+        h3 {
+            padding: 0;
+        }
+    }
+
+}
+
+@include iphoneX {
+    .feature {
+        padding: 8% 5% 10%;
+
+        .item {
+            padding-top: 10%;
+        }
+
+        h3 {
+            padding: 3% 0;
+        }
+    }
+
+}
+
+// chef
+.chef .row_2,
+.chef .main {
+    @include flex-ai-center;
+}
+
+.chef {
+    background-image: url("https://images.unsplash.com/photo-1578425570232-bf51f753dd5e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-blend-mode: soft-light;
+    background-color: $color-dark;
+    padding: 0 5%;
+
+    h2 {
+        text-align: left;
+    }
+}
+
+.chef_photo {
+    width: 50%;
+    height: 460px;
+    background: url("https://images.unsplash.com/photo-1619127839672-f82155f659a6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjA2fHxjaGVmfGVufDB8fDB8fHww") no-repeat;
+}
+
+.about_chef {
+    width: 50%;
+    margin-left: 3%;
+}
+
+.chef_name {
+    margin-bottom: 3%;
+    font-weight: bold;
+}
+
+.chef h2,
+.chef p {
+    color: #fff;
+}
+
+@include pad {
+    .about_chef {
+        width: 50%;
+        margin-left: 5%;
+    }
+}
+
+@media (max-width:767px) and (min-width:416px) {
+    .chef {
+        padding: 3%;
+    }
+}
+
+@include mobile {
+    .chef_photo {
+        width: 100%;
+        background-position: center;
+    }
+
+    .about_chef {
+        width: 100%;
+        margin-left: 0;
+        padding: 5% 10%;
+    }
+}
+
+@include iphoneX {
+    .chef {
+        padding: 0;
+    }
+
+    .chef_photo {
+        height: 460px;
+    }
+
+    .about_chef {
+        padding: 10% 6%;
+    }
+
+}
+
+// comment
+.comment {
+    padding: 5% 2%;
+
+    h2 {
+        font-weight: bold;
+    }
+
+    .container {
+        padding-top: 3%;
+    }
+
+    .item {
+        @include display-flex;
+        @include flex-row;
+        @include flex-jc-center;
+        @include flex-ai-start;
+    }
+}
+
+.people_photo {
+    max-width: 100px;
+    width: 100%;
+    height: 100px;
+    border-radius: 100px;
+    background-size: cover;
+}
+
+.people-1 {
+    background-image: url("https://images.unsplash.com/photo-1519205196298-7fc29cb73b3a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE4fHxwZW9wbGV8ZW58MHx8MHx8fDA%3D");
+}
+
+.people-2 {
+    background-image: url("https://images.unsplash.com/photo-1592621385612-4d7129426394?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTMyfHxwZW9wbGV8ZW58MHx8MHx8fDA%3D");
+}
+
+.people-3 {
+    background-image: url("https://images.unsplash.com/photo-1567784177951-6fa58317e16b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fG1hbnxlbnwwfHwwfHx8MA%3D%3D");
+}
+
+
+.people {
+    width: 70%;
+    margin-left: 5%;
+    line-height: 1.5;
+    color: $color-dark;
+}
+
+.name {
+    font-size: $font-s;
+    padding: 10% 0;
+}
+
+.job_title {
+    padding: 10% 0;
+    text-align: right;
+}
+
+@include pad {
+    .comment {
+        padding: 8% 2% 10%;
+    }
+
+    .name {
+        padding: 13% 0 5%;
+    }
+
+    .job_title {
+        padding: 5% 0;
+    }
+
+}
+
+@include mobile {
+    .comment {
+        padding: 8% 13% 10%;
+
+        .column {
+            padding: 0;
+        }
+    }
+
+    .people {
+        width: 100%;
+    }
+
+
+    .name {
+        padding: 5% 0;
+    }
+
+}
+
+@include iphoneX {
+    .comment {
+        padding: 8% 5% 10%;
+
+        .column {
+            padding: 5% 1% 0;
+        }
+
+        .h2 {
+            padding-top: 15%;
+        }
+    }
+
+    .people {
+        width: 80%;
+    }
+
+    .name {
+        padding: 8% 0;
+    }
+
+    .job_title {
+        padding: 3% 0;
+    }
+
+}
+
+// booking
+.booking {
+    padding: 5% 0;
+    background-color: $color-light;
+
+    h2 {
+        font-weight: bold;
+        color: $color-dark;
+    }
+
+    .container {
+        padding: 3% 3% 0;
+    }
+
+    .item {
+        width: 50%;
+        height: auto;
+    }
+
+    .map {
+        display: block;
+        background: url("https://attach.mobile01.com/attach/202005/mobile01-8b9c19b5e78252c49183f5670b3934fe.jpg") no-repeat;
+        background-size: cover;
+    }
+
+    form {
+        padding-left: 3%;
+        line-height: 1.5;
+        color: $color-dark;
+        font-size: 14px;
+    }
+
+}
+
+.input_style {
+    width: 100%;
+    padding: 2%;
+    margin-bottom: 4%;
+    border-radius: 3px;
+    border: 1px solid $color-normal;
+}
+
+.input_radio {
+    margin-bottom: 4%;
+    margin-right: 4%;
+}
+
+.send {
+    text-align: right;
+}
+
+.input_button {
+    padding: 10px 20px;
+    border-radius: 3px;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+}
+
+.normal {
+    background-color: $color-normal;
+}
+
+.normal:hover {
+    background-color: $color-normal-hover;
+}
+
+.highlight {
+    background-color: $color-highlight;
+    margin-left: 2%;
+    color: $color-dark;
+}
+
+.highlight:hover {
+    background-color: $color-highlight-hover;
+}
+
+@include pad {
+    .booking {
+        padding: 5% 2%;
+
+        form {
+            padding-left: 4%;
+        }
+    }
+}
+
+@include mobile {
+    .booking {
+        padding: 8% 10%;
+
+        .map {
+            height: 400px;
+            background-position: center center;
+        }
+
+        .item {
+            width: 100%;
+        }
+
+        form {
+            padding-top: 5%;
+            padding-left: 0;
+        }
+    }
+}
+
+@include iphoneX {
+    .booking {
+        padding: 8% 3% 10%;
+
+        .container {
+            padding-top: 8%;
+        }
+
+        .map {
+            height: 350px;
+            background-size: cover;
+        }
+    }
+}
+
+// index.html主要內容-結束

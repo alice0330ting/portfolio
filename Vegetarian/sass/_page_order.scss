@@ -1,0 +1,446 @@
+// order.html主要內容
+.order {
+    color: $color-light;
+}
+
+@media (max-width:1024px) {
+    .order {
+        padding: 0 3%;
+    }
+}
+
+
+// .aside側欄清單
+.aside {
+    width: 30%;
+    margin-right: 3%;
+}
+
+.page_title {
+    h2 {
+        text-align: left;
+        padding: 13% 0;
+        font-weight: bold;
+    }
+}
+
+.list {
+    li {
+        list-style: none;
+        border-bottom: 1px solid $color-dark;
+
+        a {
+            display: block;
+            padding: 7%;
+            color: $color-light;
+        }
+
+        a:hover {
+            background-color: $color-dark;
+        }
+    }
+}
+
+@include mobile {
+    .aside {
+        width: 80%;
+        margin-right: 0;
+        margin: auto;
+    }
+
+    .page_title h2 {
+        padding: 7% 0 0;
+        font-weight: 700;
+    }
+
+    .list {
+        li {
+            a {
+                padding: 4%;
+            }
+        }
+    }
+
+}
+
+@include iphoneX {
+    .aside {
+        width: 100%;
+    }
+
+}
+
+
+// .content內容
+.content {
+    width: 70%;
+}
+
+@include mobile {
+    .content {
+        width: 80%;
+        margin: 5% auto;
+    }
+}
+
+@include iphoneX {
+    .content {
+        width: 100%;
+    }
+}
+
+// toolbar
+.toolbar {
+    width: 100%;
+    padding: 5% 1%;
+    @include flex-jc-space-between;
+    @include flex-ai-center;
+
+    form {
+        width: 70%;
+        border: 2px solid $color-light;
+        @include display-flex;
+        @include flex-jc-space-between;
+    }
+
+    input {
+        padding: 2%;
+        border: 0;
+    }
+
+    .search {
+        width: 100%;
+    }
+}
+
+.search_btn {
+    width: 10%;
+    vertical-align: middle;
+    background: url(../images/search.png) no-repeat $color-bg center;
+}
+
+.shop {
+    @include display-flex;
+    @include flex-jc-end;
+    width: 30%;
+    text-align: right;
+    position: relative;
+
+    li {
+        padding-left: 20px;
+    }
+
+    a {
+        display: block;
+        width: 100%;
+        padding: 10px 5px 10px 10px;
+        color: $color-light;
+    }
+}
+
+.shop::after {
+    cursor: none;
+    display: block;
+    content: "";
+    width: 1px;
+    height: 25px;
+    background-color: $color-light;
+    position: absolute;
+    @include transform(translate(-50%, -50%));
+    top: 50%;
+    left: 75%;
+}
+
+.checkout:hover {
+    color: $color-highlight;
+}
+
+.cart {
+    position: relative;
+    color: $color-dark;
+}
+
+.cart:hover {
+    color: $color-highlight;
+    cursor: pointer;
+}
+
+.cart_number {
+    width: 15px;
+    height: 15px;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: $color-secondary;
+    border: 1px solid #fff;
+    color: $color-dark;
+    padding: 3%;
+    position: absolute;
+    right: -10%;
+    top: -10%;
+}
+
+@include pad {
+    .shop {
+        a {
+            padding: 10px 15px 10px 10px;
+        }
+    }
+
+    .shop::after {
+        top: 50%;
+        left: 87%;
+    }
+
+    .cart_number {
+        right: 5%;
+        top: -5%;
+
+    }
+
+}
+
+@media (max-width:768px) and (min-width:416px) {
+    .toolbar {
+        padding: 5% 0;
+        @include flex-wrap;
+
+        form {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+    .shop {
+        width: 100%;
+        white-space: nowrap;
+
+    }
+
+}
+
+@include iphoneX {
+    .toolbar {
+        padding: 5% 0;
+
+        form {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+    .shop {
+        width: 100%;
+    }
+
+    .shop::after {
+        left: 83%;
+    }
+
+}
+
+// content
+.content {
+    .container {
+        @include flex-wrap;
+    }
+}
+
+.card {
+    display: block;
+    max-width: 217px;
+    width: 100%;
+    text-align: center;
+    line-height: 1.5;
+    @include box-shadow;
+    border-radius: 3px;
+    margin: 0 1% 5%;
+    @include flex-ai-center;
+    padding: 0;
+    position: relative;
+    background-color: $color-light;
+}
+
+.card_content {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: $color-dark;
+    position: relative;
+    border-radius: 3px;
+    overflow: hidden;
+
+    .card_img {
+        // width: 217px;
+        width: 100%;
+        height: 150px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .card_pic-1 {
+        background-image: url("https://plus.unsplash.com/premium_photo-1664648119217-8ea44b48317e?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    }
+
+    .card_pic-2 {
+        background-image: url("https://plus.unsplash.com/premium_photo-1664648005706-98c10e27949f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fFZlZ2V0YXJpYW58ZW58MHx8MHx8fDA%3D");
+    }
+
+    .card_pic-3 {
+        background-image: url("https://images.unsplash.com/photo-1547592166-23ac45744acd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c291cHxlbnwwfDB8MHx8fDA%3D");
+    }
+
+    .card_pic-4 {
+        background-image: url("https://images.unsplash.com/photo-1633204339691-9d3645430e14?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA2fHx2ZWdldGFyaWFufGVufDB8fDB8fHww");
+    }
+
+}
+
+.description {
+    padding: 5% 3%;
+}
+
+.food_name {
+    font-size: $font-m;
+    color: $color-dark;
+}
+
+.food_name_en {
+    font-size: 12px;
+    color: $color-dark;
+}
+
+.food_name_en::after {
+    display: block;
+    content: "";
+    width: 40%;
+    height: 1px;
+    background-color: $color-secondary;
+    position: relative;
+    left: 50%;
+    @include transform(translate(-50%, -50%));
+}
+
+.price {
+    font-size: $font-m;
+    line-height: 3;
+    font-weight: 700;
+    font-style: italic;
+    color: $color-dark;
+
+}
+
+.add_cart {
+    width: 100%;
+    padding: 3% 0;
+    background-color: $color-highlight;
+    color: $color-dark;
+    border: 1px solid $color-highlight;
+    border-radius: 3px;
+}
+
+.add_cart:hover {
+    background-color: $color-highlight-hover;
+    border: 1px solid $color-highlight-hover;
+    // color: #fff;
+}
+
+.add_cart i:hover {
+    background-color: $color-highlight;
+    // color: #fff;
+}
+
+.favorite {
+    color: #fff;
+    padding: 3%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.favorite:hover {
+    color: $color-highlight;
+}
+
+.label {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    overflow: hidden;
+}
+
+.label_hot {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    background-color: #00CC99;
+    color: #fff;
+    @include transform(rotate(45deg));
+    position: relative;
+    top: 13%;
+    left: 25%;
+    text-align: center;
+    z-index: 1;
+    padding: 2% 0;
+}
+
+.label::before {
+    @include triangle(6px, transparent transparent #078f6d transparent);
+    position: absolute;
+    top: -6%;
+    left: 26%;
+}
+
+.label::after {
+    @include triangle(6px, transparent transparent transparent #078f6d);
+    position: absolute;
+    bottom: 26%;
+    right: -6%;
+}
+
+@media (max-width:1024px) {
+    .card {
+        max-width: 50%;
+    }
+
+    .card {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width:1023px) and (min-width:768px) {
+    .card {
+        max-width: 235px;
+    }
+}
+
+@media (max-width:768px) and (min-width:416px) {
+    .card {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+@include iphoneX {
+    .product {
+        width: 95%;
+        margin: auto;
+    }
+
+    .card {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto 10%;
+    }
+
+    .description {
+        padding: 5% 3%;
+    }
+
+}
+
+// order.html主要內容-結束

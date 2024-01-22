@@ -1,0 +1,87 @@
+// login.html主要內容
+.login {
+    max-width: 300px;
+    margin: 5% auto;
+    text-align: center;
+
+    img {
+        margin-bottom: 1%;
+        max-width: 120px;
+    }
+
+    h2 {
+        font-weight: 700;
+        margin-bottom: 5%;
+    }
+
+    form {
+        text-align: left;
+    }
+}
+
+.login_box {
+    background-color: $color-light;
+    border-top: 5px solid $color-highlight;
+    border-radius: 3px;
+    @include box-shadow;
+    padding: 10% 5%;
+    margin: 5% 0 0;
+    color: $color-dark;
+
+    h2 {
+        color: $color-dark;
+    }
+}
+
+.forget_password {
+    color: $color-dark;
+}
+
+.input_box {
+    margin: 2% 0 5%;
+    background-color: #fff;
+    border: 1px solid #999;
+    padding: 3%;
+
+    .fa-envelope,
+    .fa-lock {
+        color: #999;
+    }
+}
+
+.btn_box {
+    @include display-flex;
+}
+
+.input_email,
+.input_password {
+    width: 89%;
+    margin-left: 2%;
+    border: 0;
+}
+
+.register_btn {
+    display: block;
+    color: $color-dark
+}
+
+.login_btn {
+    text-align: center;
+}
+
+.login_btn,
+.register_btn {
+    width: 48%;
+    margin-top: 10%;
+    font-size: 16px;
+    line-height: 1;
+}
+
+@include iphoneX {
+    .login {
+        max-width: 360px;
+        margin: 10% auto;
+    }
+}
+
+// login.html主要內容-結束

@@ -1,0 +1,385 @@
+// loyout開始
+.h2_line::before {
+    @include decorate-line;
+    left: 15%;
+}
+
+.h2_line::after {
+    @include decorate-line;
+    right: 15%;
+}
+
+.wrap {
+    margin: 0 auto;
+    font-family: 'MicrosoftJhengHeiRegular', Arial, Helvetica, sans-serif;
+    position: relative;
+    background-color: $color-bg;
+}
+
+.main {
+    max-width: 1024px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.row {
+    @include display-flex;
+    width: 100%;
+}
+
+.row_2 {
+    @include display-flex;
+}
+
+.column {
+    width: 33.333%;
+    @include display-flex;
+    @include flex-column;
+    padding: 0 3%;
+}
+
+@include pad {
+    .h2_line::before {
+        left: 3%;
+    }
+
+    .h2_line::after {
+        right: 3%;
+    }
+
+}
+
+@include mobile {
+    .row {
+        @include flex-column;
+    }
+
+    .row_2 {
+        @include flex-column;
+    }
+
+    .column {
+        width: 100%;
+        padding: 0 10% 5%;
+    }
+}
+
+@media (max-width: 415px) {
+    .column {
+        padding: 5% 3% 0;
+    }
+
+}
+
+// 以下header、kv、footer 共用
+
+
+// header
+.header {
+    background-color: rgba(11, 19, 14, 75%);
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 100;
+    padding: 0 3%;
+
+    .main {
+        max-width: 1024px;
+        @include display-flex;
+        @include flex-jc-space-between;
+        @include flex-ai-center;
+    }
+}
+
+.header_logo {
+    display: block;
+    width: 30%;
+    height: 35px;
+    background: url("../images/logo.png") no-repeat;
+    background-size: contain;
+    @include hidden-text;
+}
+
+.nav {
+    @include display-flex;
+    @include flex-jc-end;
+    width: 70%;
+
+    a {
+        display: block;
+        font-size: $font-m;
+        padding: 18px;
+        color: #fff;
+    }
+
+    a::after {
+        display: block;
+        content: "";
+        width: 0;
+        height: 2px;
+        background-color: $color-secondary;
+        position: relative;
+        top: 5px;
+        @include transition(all .3s);
+    }
+
+    a:hover::after {
+        width: 100%;
+        left: 0;
+    }
+}
+
+.showmenu {
+    display: none;
+}
+
+@include iphoneX {
+    .header {
+        border-bottom: 1px solid $color-normal;
+        padding: 3% 6%;
+    }
+
+    .header_logo {
+        // width: 40%;
+        // height: 40px;
+        // padding: 10px 0;
+        background-size: contain;
+    }
+
+    .nav {
+        width: 100%;
+        max-height: 0px;
+        @include flex-column;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 102%;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 90%);
+        @include transition(all .5s);
+        overflow: hidden;
+
+        li {
+            border-bottom: 1px solid $color-normal;
+
+            a {
+                padding: 30px 0;
+            }
+
+            a::after {
+                display: none;
+            }
+
+            a:hover {
+                background-color: $color-highlight-hover;
+                color: $color-dark;
+            }
+        }
+    }
+
+    .showmenu {
+        display: block;
+    }
+
+    .menu-show {
+        .nav {
+            max-height: 500px;
+        }
+    }
+}
+
+// KV
+.kv {
+    height: 420px;
+    background: url("https://images.unsplash.com/photo-1615366105533-5b8f3255ea5d?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat #fff 50% 0%;
+    background-size: cover;
+    @include display-flex;
+    @include flex-jc-center;
+    @include flex-ai-center;
+    position: relative;
+
+    &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgba(255, 255, 255, 40%);
+    }
+}
+
+.title {
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    padding: 3%;
+
+    h4 {
+        color: $color-primary;
+        font-weight: bold;
+    }
+
+    h1 {
+        font-family: 'Praise';
+        font-size: 120px;
+        line-height: 1;
+        color: $color-primary;
+
+        br {
+            display: none;
+        }
+    }
+}
+
+@include mobile {
+    .title {
+        h1 {
+            font-size: 80px;
+        }
+
+        h4 {
+            font-size: 20px;
+        }
+    }
+}
+
+@include iphoneX {
+
+    .title {
+
+        h1 {
+            font-size: 70px;
+
+            br {
+                display: inline;
+            }
+        }
+    }
+
+}
+
+// footer
+.footer {
+    background-color: $color-dark;
+
+    .main {
+        padding: 5% 0;
+    }
+
+    h4 {
+        margin-bottom: 5%;
+    }
+}
+
+.footer // contact
+
+.contact {
+    ul {
+        line-height: 1.5;
+        list-style: disc;
+        margin-left: 1em;
+    }
+}
+
+// community
+
+.community {
+    @include display-flex;
+    @include flex-column;
+    @include flex-ai-end;
+}
+
+.footer_logo {
+    display: block;
+    width: 80%;
+    height: 50px;
+    background: url("../images/logo.png") no-repeat;
+    background-position: right;
+    margin-bottom: 5%;
+    background-size: contain;
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.link {
+    @include display-flex;
+
+    a {
+        display: block;
+        margin-left: 10px;
+        line-height: 1;
+
+        .fa-2xl {
+            line-height: 1;
+        }
+    }
+}
+
+.icon-google {
+    color: #d84437;
+}
+
+.icon-fb {
+    color: #3a5795;
+}
+
+.icon-twitter {
+    color: #41abe1;
+}
+
+@include pad {
+    .footer {
+        padding: 3% 0 0;
+    }
+
+    .footer_logo {
+        height: 40px;
+    }
+}
+
+@include mobile {
+    .community {
+        @include flex-ai-start;
+    }
+
+    .footer {
+        h4 {
+            margin-bottom: 1%;
+        }
+    }
+
+    .footer_logo {
+        margin-bottom: 3%;
+        background-position: left;
+    }
+
+    .link {
+        a {
+            margin-left: 0;
+            margin-right: 10px;
+        }
+    }
+
+}
+
+@include iphoneX {
+    .footer {
+        padding: 3% 0 10%;
+
+        .main {
+            padding: 0 3%;
+        }
+    }
+
+    .contact {
+        margin: 2% 0;
+    }
+
+    .footer_logo {
+        width: 50%;
+    }
+
+}
+
+// loyout結束
