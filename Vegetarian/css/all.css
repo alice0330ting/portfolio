@@ -849,6 +849,20 @@ h4 {
     padding-top: 5%;
     padding-left: 0;
   }
+  .booking form label {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  .booking form input {
+    font-size: 18px;
+  }
+  .booking form .input_button {
+    line-height: 1;
+  }
+  .input_style {
+    font-size: 18px;
+    line-height: 1.5;
+  }
 }
 @media (max-width: 415px) {
   .booking {
@@ -941,7 +955,6 @@ h4 {
 }
 .toolbar form {
   width: 70%;
-  border: 2px solid #f5fff9;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -960,7 +973,7 @@ h4 {
 .search_btn {
   width: 10%;
   vertical-align: middle;
-  background: url(../images/search.png) no-repeat #2a4835 center;
+  background: url(../images/search.png) no-repeat #0b130e center;
 }
 
 .shop {
@@ -1054,6 +1067,14 @@ h4 {
   .shop {
     width: 100%;
     white-space: nowrap;
+  }
+}
+@media (max-width: 640px) {
+  input {
+    padding: 2%;
+    border: 1px solid #fff;
+    font-size: 18px;
+    line-height: 1.5;
   }
 }
 @media (max-width: 415px) {
@@ -1250,6 +1271,12 @@ h4 {
     width: 100%;
   }
 }
+@media (max-width: 640px) {
+  .add_cart {
+    font-size: 18px;
+    line-height: 1;
+  }
+}
 @media (max-width: 415px) {
   .product {
     width: 95%;
@@ -1336,10 +1363,15 @@ h4 {
 .register_btn {
   width: 48%;
   margin-top: 10%;
-  font-size: 16px;
   line-height: 1;
 }
 
+@media (max-width: 640px) {
+  .login_content {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+}
 @media (max-width: 415px) {
   .login {
     max-width: 360px;
@@ -1442,8 +1474,13 @@ h4 {
   .register_box .terms {
     margin-top: 5%;
   }
+  .register_box .register_content {
+    font-size: 18px;
+    line-height: 1.5;
+  }
   .register_box .register_btn {
     margin-top: 5%;
+    line-height: 1;
   }
 }
 @media (max-width: 415px) {
