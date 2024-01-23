@@ -98,7 +98,6 @@
 
     form {
         width: 70%;
-        border: 2px solid $color-light;
         @include display-flex;
         @include flex-jc-space-between;
     }
@@ -116,7 +115,7 @@
 .search_btn {
     width: 10%;
     vertical-align: middle;
-    background: url(../images/search.png) no-repeat $color-bg center;
+    background: url(../images/search.png) no-repeat $color-dark center;
 }
 
 .shop {
@@ -215,6 +214,16 @@
         width: 100%;
         white-space: nowrap;
 
+    }
+
+}
+
+@include mobile {
+    input {
+        padding: 2%;
+        border: 1px solid #fff;
+        font-size: 18px;
+        line-height: 1.5;
     }
 
 }
@@ -422,6 +431,13 @@
     .card {
         max-width: 100%;
         width: 100%;
+    }
+}
+
+@include mobile {
+    .add_cart {
+        font-size: 18px;
+        line-height: 1;
     }
 }
 

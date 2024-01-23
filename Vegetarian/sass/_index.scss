@@ -397,7 +397,25 @@
         form {
             padding-top: 5%;
             padding-left: 0;
+
+            label {
+                font-size: 18px;
+                line-height: 1.5;
+            }
+
+            input {
+                font-size: 18px;
+            }
+
+            .input_button {
+                line-height: 1;
+            }
         }
+    }
+
+    .input_style {
+        font-size: 18px;
+        line-height: 1.5;
     }
 }
 

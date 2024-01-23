@@ -106,11 +106,19 @@
             margin-top: 5%;
         }
 
+        .register_content {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+
         .register_btn {
             margin-top: 5%;
+            line-height: 1;
         }
     }
 }
+
 
 @include iphoneX {
     .register {

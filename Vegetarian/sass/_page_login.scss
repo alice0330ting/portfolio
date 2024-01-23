@@ -37,6 +37,8 @@
     color: $color-dark;
 }
 
+
+
 .input_box {
     margin: 2% 0 5%;
     background-color: #fff;
@@ -73,8 +75,14 @@
 .register_btn {
     width: 48%;
     margin-top: 10%;
-    font-size: 16px;
     line-height: 1;
+}
+
+@include mobile {
+    .login_content {
+        font-size: 18px;
+        line-height: 1.5;
+    }
 }
 
 @include iphoneX {
