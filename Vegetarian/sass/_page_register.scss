@@ -33,7 +33,7 @@
     }
 
     ol {
-        list-style: auto;
+        list-style: decimal;
         margin-left: 1.2em;
     }
 
@@ -109,6 +109,11 @@
         .register_content {
             font-size: 16px;
             line-height: 1.5;
+
+            .input_email,
+            .input_password {
+                font-size: 16px;
+            }
         }
 
         .register_btn {
