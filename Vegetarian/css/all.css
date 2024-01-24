@@ -850,17 +850,17 @@ h4 {
     padding-left: 0;
   }
   .booking form label {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.5;
   }
   .booking form input {
-    font-size: 18px;
+    font-size: 16px;
   }
   .booking form .input_button {
     line-height: 1;
   }
   .input_style {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.5;
   }
 }
