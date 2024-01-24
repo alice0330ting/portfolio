@@ -1415,7 +1415,7 @@ h4 {
   color: #0b130e;
 }
 .register_box ol {
-  list-style: auto;
+  list-style: decimal;
   margin-left: 1.2em;
 }
 .register_box li {
@@ -1481,6 +1481,10 @@ h4 {
   .register_box .register_content {
     font-size: 16px;
     line-height: 1.5;
+  }
+  .register_box .register_content .input_email,
+  .register_box .register_content .input_password {
+    font-size: 16px;
   }
   .register_box .register_btn {
     margin-top: 5%;
