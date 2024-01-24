@@ -503,6 +503,12 @@ h4 {
     width: 50%;
   }
 }
+@media (max-width: 640px) {
+  .input_button {
+    font-size: 18px;
+    line-height: 1;
+  }
+}
 .feature {
   padding: 5% 2%;
 }
@@ -844,20 +850,12 @@ h4 {
   }
   .booking .item {
     width: 100%;
+    font-size: 16px;
+    line-height: 1.5;
   }
   .booking form {
     padding-top: 5%;
     padding-left: 0;
-  }
-  .booking form label {
-    font-size: 16px;
-    line-height: 1.5;
-  }
-  .booking form input {
-    font-size: 16px;
-  }
-  .booking form .input_button {
-    line-height: 1;
   }
   .input_style {
     font-size: 16px;
@@ -1370,7 +1368,6 @@ h4 {
 .register_btn {
   width: 48%;
   margin-top: 10%;
-  line-height: 1;
 }
 
 @media (max-width: 640px) {
@@ -1487,7 +1484,6 @@ h4 {
   }
   .register_box .register_btn {
     margin-top: 5%;
-    line-height: 1;
   }
 }
 @media (max-width: 415px) {
