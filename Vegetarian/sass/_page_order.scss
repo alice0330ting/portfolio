@@ -219,12 +219,24 @@
 }
 
 @include mobile {
-    input {
-        padding: 2%;
-        border: 1px solid #fff;
-        font-size: 18px;
-        line-height: 1.5;
+    .toolbar {
+        input {
+            padding: 2%;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .search {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .search_btn {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
     }
+
 
 }
 
@@ -436,7 +448,7 @@
 
 @include mobile {
     .add_cart {
-        font-size: 18px;
+        font-size: 16px;
         line-height: 1;
     }
 }
