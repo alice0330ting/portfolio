@@ -383,3 +383,9 @@
 }
 
 // loyout結束
+@include mobile {
+    .input_button {
+        font-size: 18px;
+        line-height: 1;
+    }
+}
