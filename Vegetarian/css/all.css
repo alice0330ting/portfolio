@@ -1070,11 +1070,18 @@ h4 {
   }
 }
 @media (max-width: 640px) {
-  input {
+  .toolbar input {
     padding: 2%;
-    border: 1px solid #fff;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.5;
+  }
+  .toolbar .search {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .toolbar .search_btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
   }
 }
 @media (max-width: 415px) {
@@ -1273,7 +1280,7 @@ h4 {
 }
 @media (max-width: 640px) {
   .add_cart {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1;
   }
 }
@@ -1368,7 +1375,7 @@ h4 {
 
 @media (max-width: 640px) {
   .login_content {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.5;
   }
 }
@@ -1475,7 +1482,7 @@ h4 {
     margin-top: 5%;
   }
   .register_box .register_content {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.5;
   }
   .register_box .register_btn {
