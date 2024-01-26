@@ -345,30 +345,8 @@
     text-align: right;
 }
 
-.input_button {
-    padding: 10px 20px;
-    border-radius: 3px;
-    border: 0;
-    color: #fff;
-    cursor: pointer;
-}
-
-.normal {
-    background-color: $color-normal;
-}
-
-.normal:hover {
-    background-color: $color-normal-hover;
-}
-
-.highlight {
-    background-color: $color-highlight;
+.btn_submit {
     margin-left: 2%;
-    color: $color-dark;
-}
-
-.highlight:hover {
-    background-color: $color-highlight-hover;
 }
 
 @include pad {

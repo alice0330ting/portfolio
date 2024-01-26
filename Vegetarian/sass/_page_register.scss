@@ -54,40 +54,8 @@
         text-align: left;
     }
 
-    .btn_box {
-        @include flex-jc-end;
-    }
-
-    .login_btn {
-        color: #fff;
-        margin-left: 0;
-    }
-
 }
 
-.input_box {
-    margin: 2% 0 5%;
-    background-color: #fff;
-    border: 1px solid #999;
-    padding: 3%;
-
-    .fa-envelope,
-    .fa-lock {
-        color: #999;
-    }
-}
-
-.input_email,
-.input_password {
-    width: 89%;
-    margin-left: 2%;
-    border: 0;
-}
-
-.login_btn {
-    width: 48%;
-    margin-top: 10%;
-}
 
 @include mobile {
     .register_box {
@@ -110,14 +78,6 @@
             font-size: 16px;
             line-height: 1.5;
 
-            .input_email,
-            .input_password {
-                font-size: 16px;
-            }
-        }
-
-        .register_btn {
-            margin-top: 5%;
         }
     }
 }

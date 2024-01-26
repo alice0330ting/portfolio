@@ -39,44 +39,6 @@
 
 
 
-.input_box {
-    margin: 2% 0 5%;
-    background-color: #fff;
-    border: 1px solid #999;
-    padding: 3%;
-
-    .fa-envelope,
-    .fa-lock {
-        color: #999;
-    }
-}
-
-.btn_box {
-    @include display-flex;
-}
-
-.input_email,
-.input_password {
-    width: 89%;
-    margin-left: 2%;
-    border: 0;
-}
-
-.register_btn {
-    display: block;
-    color: $color-dark
-}
-
-.login_btn {
-    text-align: center;
-}
-
-.login_btn,
-.register_btn {
-    width: 48%;
-    margin-top: 10%;
-}
-
 @include mobile {
     .login_content {
         font-size: 16px;
