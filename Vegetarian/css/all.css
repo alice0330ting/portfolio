@@ -221,6 +221,77 @@ h4 {
     padding: 5% 3% 0;
   }
 }
+.m_l_auto {
+  margin-left: auto;
+}
+
+.btn {
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 3px;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  line-height: 1;
+}
+
+@media (max-width: 640px) {
+  .btn {
+    font-size: 18px;
+  }
+}
+.normal {
+  background-color: #777;
+}
+
+.normal:hover {
+  background-color: #999;
+}
+
+.highlight {
+  background-color: #fff454;
+  color: #0b130e;
+}
+
+.highlight:hover {
+  background-color: #ffee11;
+}
+
+.input_box {
+  margin: 2% 0 5%;
+  background-color: #fff;
+  border: 1px solid #999;
+  padding: 3%;
+}
+.input_box .fa-envelope,
+.input_box .fa-lock {
+  color: #999;
+}
+
+.btn_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.input_email,
+.input_password {
+  width: 89%;
+  margin-left: 2%;
+  border: 0;
+}
+
+.register_btn {
+  display: block;
+  text-align: center;
+}
+
+.login_btn,
+.register_btn {
+  width: 48%;
+  margin-top: 10%;
+}
+
 .header {
   background-color: rgba(11, 19, 14, 0.75);
   position: fixed;
@@ -501,12 +572,6 @@ h4 {
   }
   .footer_logo {
     width: 50%;
-  }
-}
-@media (max-width: 640px) {
-  .input_button {
-    font-size: 18px;
-    line-height: 1;
   }
 }
 .feature {
@@ -806,30 +871,8 @@ h4 {
   text-align: right;
 }
 
-.input_button {
-  padding: 10px 20px;
-  border-radius: 3px;
-  border: 0;
-  color: #fff;
-  cursor: pointer;
-}
-
-.normal {
-  background-color: #777;
-}
-
-.normal:hover {
-  background-color: #999;
-}
-
-.highlight {
-  background-color: #fff454;
+.btn_submit {
   margin-left: 2%;
-  color: #0b130e;
-}
-
-.highlight:hover {
-  background-color: #ffee11;
 }
 
 @media (max-width: 768px) {
@@ -1331,45 +1374,6 @@ h4 {
   color: #0b130e;
 }
 
-.input_box {
-  margin: 2% 0 5%;
-  background-color: #fff;
-  border: 1px solid #999;
-  padding: 3%;
-}
-.input_box .fa-envelope,
-.input_box .fa-lock {
-  color: #999;
-}
-
-.btn_box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.input_email,
-.input_password {
-  width: 89%;
-  margin-left: 2%;
-  border: 0;
-}
-
-.register_btn {
-  display: block;
-  color: #0b130e;
-}
-
-.login_btn {
-  text-align: center;
-}
-
-.login_btn,
-.register_btn {
-  width: 48%;
-  margin-top: 10%;
-}
-
 @media (max-width: 640px) {
   .login_content {
     font-size: 16px;
@@ -1431,38 +1435,6 @@ h4 {
 .register_box form {
   text-align: left;
 }
-.register_box .btn_box {
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: end;
-}
-.register_box .login_btn {
-  color: #fff;
-  margin-left: 0;
-}
-
-.input_box {
-  margin: 2% 0 5%;
-  background-color: #fff;
-  border: 1px solid #999;
-  padding: 3%;
-}
-.input_box .fa-envelope,
-.input_box .fa-lock {
-  color: #999;
-}
-
-.input_email,
-.input_password {
-  width: 89%;
-  margin-left: 2%;
-  border: 0;
-}
-
-.login_btn {
-  width: 48%;
-  margin-top: 10%;
-}
 
 @media (max-width: 640px) {
   .register_box {
@@ -1481,13 +1453,6 @@ h4 {
   .register_box .register_content {
     font-size: 16px;
     line-height: 1.5;
-  }
-  .register_box .register_content .input_email,
-  .register_box .register_content .input_password {
-    font-size: 16px;
-  }
-  .register_box .register_btn {
-    margin-top: 5%;
   }
 }
 @media (max-width: 415px) {
