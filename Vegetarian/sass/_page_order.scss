@@ -372,7 +372,7 @@
 }
 
 .favorite {
-    color: #fff;
+    color: $color-favorite;
     padding: 3%;
     position: absolute;
     top: 0;
@@ -380,7 +380,7 @@
 }
 
 .favorite:hover {
-    color: $color-highlight;
+    color: $color-favorite-hover;
 }
 
 .label {
