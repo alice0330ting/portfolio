@@ -13,6 +13,7 @@
     <meta property="og:image" content="FB的圖片" />
     <link href="https://fonts.googleapis.com/css2?family=Praise&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/all.css">
 
     <title>登入/註冊-響應式網頁設計最終作業</title>
@@ -21,27 +22,33 @@
 <body>
     <div class="wrap">
         <!-- header -->
-        <div class="header">
+        <div class="header" data-aos="fade-down" data-aos-delay="300" data-aos-duration="500" data-aos-duration="1500">
             <div class="main">
-                <a href="index.html" class="header_logo">舒食</a>
+                <a href="index.html" class="header_logo" data-aos="fade-right" data-aos-delay="800"
+                    data-aos-duration="1500">舒食</a>
                 <ul class="nav">
-                    <li><a href="index.html">首頁</a></li>
-                    <li><a href="order.html">點餐</a></li>
-                    <li><a href="login.html">登入</a></li>
+                    <li data-aos="fade-left" data-aos-delay="800" data-aos-duration="1500"><a href="index.html">首頁</a>
+                    </li>
+                    <li data-aos="fade-left" data-aos-delay="800" data-aos-duration="1500"><a href="order.html">點餐</a>
+                    </li>
+                    <li data-aos="fade-left" data-aos-delay="800" data-aos-duration="1500"><a href="login.html">登入</a>
+                    </li>
                 </ul>
-                <a href="#" class="showmenu"><i class="fa-solid fa-bars fa-2xl" style="color: #ffffff;"></i></a>
+                <a href="#" class="showmenu" data-aos="fade-left" data-aos-delay="800" data-aos-duration="1500"><i
+                        class="fa-solid fa-bars fa-2xl" style="color: #ffffff;"></i></a>
             </div>
         </div>
         <!-- kv -->
-        <div class="kv">
-            <div class="title">
+        <div class="kv" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">
+            <div class="title" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="500"
+                data-aos-offset="0">
                 <h1>Vegetarian</h1>
                 <h4><i class="fa-solid fa-utensils"></i> 來一趟「舒食」，世界蔬食盡收眼底 <i class="fa-solid fa-utensils"></i></h4>
             </div>
         </div>
 
         <!-- 主要內容 -->
-        <div class="login">
+        <div class="login" data-aos="fade-down" data-aos-easing="linear" data-aos-delay="300" data-aos-duration="1500">
             <img src="images/logo.png" alt="舒食logo" class="login_logo">
             <h2>享受美食好味道</h2>
             <div class="login_box">
@@ -111,7 +118,11 @@
     <script src="js/all.js"></script>
     <!-- icon元件 -->
     <script src="https://kit.fontawesome.com/cec3811830.js" crossorigin="anonymous"></script>
-
+    <!-- AOS動態元件 -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
