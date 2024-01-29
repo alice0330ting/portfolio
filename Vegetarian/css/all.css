@@ -382,9 +382,9 @@ h4 {
     top: 102%;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.9);
-    -webkit-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
+    -webkit-transition: max-height 1.5s;
+    -o-transition: max-height 1.5s;
+    transition: max-height 1.5s;
     overflow: hidden;
   }
   .nav li {
