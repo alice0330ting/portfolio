@@ -235,7 +235,7 @@
         top: 102%;
         text-align: center;
         background-color: rgba(0, 0, 0, 90%);
-        @include transition(all .5s);
+        @include transition(max-height 1.5s);
         overflow: hidden;
 
         li {
